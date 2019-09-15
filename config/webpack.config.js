@@ -415,6 +415,19 @@ module.exports = function(webpackEnv) {
             // to a file, but in development "style" loader enables hot editing
             // of CSS.
             // By default we support CSS Modules with the extension .module.css
+            // Stylus
+            {
+              test: /\.styl$/,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 2,
+                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  getLocalIdent: getCSSModuleLocalIdent,
+                },
+                'stylus-loader'
+              ),
+              sideEffects: true,
+            },
             {
               test: cssRegex,
               exclude: cssModuleRegex,
