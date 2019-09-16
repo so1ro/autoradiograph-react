@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.styl";
-// import "./asset/css/common.styl";
 
 class App extends Component {
   state = {};
@@ -8,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <span className="respoFont">Hello World</span>
+        <h1>Hello World</h1>
       </div>
     );
   }

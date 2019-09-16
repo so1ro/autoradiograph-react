@@ -138,6 +138,7 @@
     ]
   },
   "devDependencies": {
+    "postcss-cssnext": "^3.1.0",
     "rucksack-css": "^1.0.2"
   }
 }
