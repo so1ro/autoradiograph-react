@@ -136,5 +136,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "rucksack-css": "^1.0.2"
   }
 }
