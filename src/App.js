@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.styl";
+// import "./asset/css/common.styl";
 
 class App extends Component {
   state = {};
