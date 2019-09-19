@@ -1,5 +1,7 @@
 @import '../../asset/css/*'
 
+nav-margin-pc = 1.666667vw
+
 .gNav
     background #000
     color #ffffff
@@ -16,5 +18,26 @@
         display flex
         list-style-type none
 
+        ~ ul
+            margin-left nav-margin-pc
+
         li ~ li
-            margin-left 1.5rem
+            margin-left nav-margin-pc
+
+    ul.navCV
+        li a
+            background activeColor
+            display block
+            text-align center
+            width 94px
+
+    @media (--tablet: )
+        grid-auto-flow dense
+        grid-template-columns 1fr 1fr
+
+        .navLink
+            grid-column 1 / -1
+            justify-content center
+
+        .navCV
+            justify-self end

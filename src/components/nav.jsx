@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import moduleName from "./css/nav.styl";
+import "./css/nav.styl";
 
 class Nav extends Component {
   state = {};
@@ -10,7 +10,7 @@ class Nav extends Component {
         <h1>
           <Link to="/">Autoradiograph</Link>
         </h1>
-        <ul className="NavLink">
+        <ul className="navLink">
           <li>
             <NavLink to="/" exact>
               Top
@@ -31,6 +31,8 @@ class Nav extends Component {
           <li>
             <NavLink to="/">JP / EN</NavLink>
           </li>
+        </ul>
+        <ul className="navCV">
           <li>
             <NavLink to="/">Patreon</NavLink>
           </li>
