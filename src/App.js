@@ -1,4 +1,10 @@
 import React, { Component } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Nav from "./components/nav";
+import Top from "./components/top";
+import History from "./components/history";
+import ShortMovie from "./components/shortmovie";
+import NotFound from "./components/not-found";
 import "./App.styl";
 
 class App extends Component {
@@ -6,8 +12,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <span className="respoFont">Hello World</span>
-        <h1>Hello World</h1>
+        <Nav />
+        <main>
+          <Switch>
+            <Route
+              path="/history"
+              component={props => <History sortBy={"newest"} {...props} />}
+            />
+            <Route
+              path="/shortmovie"
+              component={props => (
+                <ShortMovie addProps={"addedProps"} {...props} />
+              )}
+            />
+            <Route path="/not-found" component={NotFound} />
+            <Route path="/" exact component={Top} />
+            <Redirect to="/not-found" />
+          </Switch>
+        </main>
       </div>
     );
   }
