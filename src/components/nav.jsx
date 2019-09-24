@@ -47,7 +47,7 @@ class Nav extends Component {
               <NavLink to="/">Contact</NavLink>
             </li>
             <li>
-              <NavLink to="/">JP / EN</NavLink>
+              <NavLink to="/">JP</NavLink>
             </li>
           </ul>
 
