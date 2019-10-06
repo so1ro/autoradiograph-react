@@ -6,6 +6,7 @@ import History from "./components/history";
 import ShortMovie from "./components/shortmovie";
 import NotFound from "./components/not-found";
 import "./App.styl";
+import Footer from './components/footer';
 
 class App extends Component {
   state = {};
@@ -30,6 +31,7 @@ class App extends Component {
             <Redirect to="/not-found" />
           </Switch>
         </main>
+        <Footer/>
       </div>
     );
   }
