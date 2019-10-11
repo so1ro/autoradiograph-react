@@ -2,6 +2,7 @@
 
 main.shortmovie
     padding-bottom margin60
+    padding-top margin60
 
     ul.card
         margin 0 auto
@@ -25,21 +26,41 @@ main.shortmovie
             margin-bottom 0
 
     @media (--tablet: )
-        .card
-            padding-top 56.25%
+        ul.card
+            // padding-top 56.25%
+            width 100%
+
+            li
+                display block
+                margin-left auto
+                margin-right auto
+                padding-top 50.25%
+                position relative
+                width 90%
 
         iframe
             height 100% !important
-            // height 54%
             left 50%
-            max-width 1000px
+            /* height: 100%; */
+            /* max-width: 1000px; */
+            /* padding-top: 56.25%; */
             position absolute
-            top 0
+            top -4%
             transform translateX(-50%)
-            width 100%
+            width 95% !important
+
+    @media (--sp: )
+        ul.card li
+            padding-bottom 10px
+
+        iframe
+            width 93% !important
 
 .caption
     // font-size --font-size
     line-height 1
     padding-top 14px
     text-align left
+
+    .num
+        font-size 1.2em

@@ -27,6 +27,9 @@ const ShortMovie = () => {
             allowfullscreen
             title="How to take Autoradiograph"
           ></iframe>
+          <div className="caption">
+            <span className="num">2015 - 2016</span>
+          </div>
         </li>
         <li>
           <iframe
@@ -38,6 +41,9 @@ const ShortMovie = () => {
             allowfullscreen
             title="How to take Autoradiograph"
           ></iframe>
+          <div className="caption">
+            <span className="num">2012 - 2014</span>
+          </div>
         </li>
       </ul>
     </main>

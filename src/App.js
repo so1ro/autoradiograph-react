@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./components/nav";
 import Top from "./components/top";
-import History from "./components/history";
+import History from "./components/history/history";
 import ShortMovie from "./components/shortmovie";
 import NotFound from "./components/not-found";
 import "./App.styl";

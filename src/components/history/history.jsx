@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../css/history.styl";
 
 class History extends Component {
   state = {};
