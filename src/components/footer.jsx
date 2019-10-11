@@ -24,7 +24,7 @@ class Footer extends Component {
               <NavLink to="/shortmovie">Short movie</NavLink>
             </li>
             <li>
-              <NavLink to="/">Print</NavLink>
+              <NavLink to="/print">Print</NavLink>
             </li>
           </ul>
 
@@ -36,7 +36,7 @@ class Footer extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/">
+              <NavLink to="/contact">
                 <img src={iconContact} alt="Contact" />
               </NavLink>
             </li>

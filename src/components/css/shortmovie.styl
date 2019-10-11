@@ -1,16 +1,28 @@
 @import '../../asset/css/*'
 
 main.shortmovie
-    .card
-        position relative
-        width 100%
+    padding-bottom margin60
 
-        iframe
+    ul.card
+        margin 0 auto
+        position relative
+        text-align center
+        width 70%
+
+        li
             background rgba(#fff, .2)
             border-radius rfs(1rem)
+            display inline-block
+            list-style none
+            margin-bottom margin60
+            padding 16px
+
+        iframe
             display block
             margin 0 auto
-            padding margin20
+
+        iframe:last-child
+            margin-bottom 0
 
     @media (--tablet: )
         .card
@@ -25,3 +37,9 @@ main.shortmovie
             top 0
             transform translateX(-50%)
             width 100%
+
+.caption
+    // font-size --font-size
+    line-height 1
+    padding-top 14px
+    text-align left

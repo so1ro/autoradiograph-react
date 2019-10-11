@@ -41,10 +41,10 @@ class Nav extends Component {
               <NavLink to="/shortmovie">Short movie</NavLink>
             </li>
             <li>
-              <NavLink to="/">Print</NavLink>
+              <NavLink to="/print">Print</NavLink>
             </li>
             <li>
-              <NavLink to="/">Contact</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
             <li>
               <NavLink to="/">JP / EN</NavLink>
