@@ -1,10 +1,8 @@
 import React from "react";
+import "../css/history.styl";
 
-class Exhibition extends Component {
-  state = {};
-  render() {
-    return <h2>Exhibition</h2>;
-  }
-}
+const Exhibition = () => {
+  return <h2>Exhibition</h2>;
+};
 
 export default Exhibition;

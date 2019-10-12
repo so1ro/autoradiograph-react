@@ -1,0 +1,28 @@
+@import '../../../asset/css/*'
+
+ul.historyTabs
+    display grid
+    font-size --font-size * 1.5
+    grid-template-columns repeat(3, 200px)
+    justify-content center
+    margin-bottom margin90
+
+    li
+        list-style none
+        text-align center
+
+        a
+            border-bottom 2px solid #4E5257
+            display block
+            transition .6s
+
+        a.active
+            border-bottom 2px solid activeColor
+            color activeColor
+
+        a:hover
+            border-bottom 2px solid activeColor
+            color activeColor
+
+    @media (--tablet: )
+        grid-template-columns repeat(3, 1fr)

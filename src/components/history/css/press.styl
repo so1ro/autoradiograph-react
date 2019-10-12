@@ -1,0 +1,36 @@
+@import '../../../asset/css/*'
+
+ul.press
+    display grid
+    grid-gap 8px
+    grid-template-columns repeat(auto-fit, minmax(234px, 1fr))
+    list-style none
+
+    li
+        background rgba(#fff, .3)
+        padding 8px 8px 4px
+        text-align center
+
+        div
+            display inline-block
+            width 100%
+
+        img
+            width 100%
+
+    @media (--sp2: )
+        grid-template-columns repeat(2, 1fr)
+
+    @media (--sp: )
+        grid-gap 4px
+
+    .caption
+        display block
+        font-size 18px
+        text-align left
+
+        .date
+            display inline-block
+            font-size 14px
+            margin-left 4px
+            opacity .6

@@ -3,8 +3,8 @@ import "./css/shortmovie.styl";
 
 const ShortMovie = () => {
   return (
-    <main className="shortmovie">
-      <ul className="card">
+    <React.Fragment>
+      <ul className="shortmovie-card">
         <li>
           <iframe
             src="https://player.vimeo.com/video/289985456"
@@ -46,7 +46,7 @@ const ShortMovie = () => {
           </div>
         </li>
       </ul>
-    </main>
+    </React.Fragment>
   );
 };
 

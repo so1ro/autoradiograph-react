@@ -1,62 +1,58 @@
 @import '../../asset/css/*'
 
-main.shortmovie
-    padding-bottom margin60
-    padding-top margin60
+ul.shortmovie-card
+    margin 0 auto
+    position relative
+    text-align center
+    width 70%
 
-    ul.card
+    li
+        background rgba(#fff, .2)
+        border-radius rfs(1rem)
+        display inline-block
+        list-style none
+        margin-bottom margin60
+        padding 16px
+
+    iframe
+        display block
         margin 0 auto
-        position relative
-        text-align center
-        width 70%
+
+    iframe:last-child
+        margin-bottom 0
+
+@media (--tablet: )
+    ul.shortmovie-card
+        // padding-top 56.25%
+        width 100%
 
         li
-            background rgba(#fff, .2)
-            border-radius rfs(1rem)
-            display inline-block
-            list-style none
-            margin-bottom margin60
-            padding 16px
-
-        iframe
             display block
-            margin 0 auto
+            margin-left auto
+            margin-right auto
+            padding-top 50.25%
+            position relative
+            width 90%
 
-        iframe:last-child
-            margin-bottom 0
+    iframe
+        height 100% !important
+        left 50%
+        /* height: 100%; */
+        /* max-width: 1000px; */
+        /* padding-top: 56.25%; */
+        position absolute
+        top -4%
+        transform translateX(-50%)
+        width 95% !important
 
-    @media (--tablet: )
-        ul.card
-            // padding-top 56.25%
-            width 100%
+@media (--sp: )
+    ul.shortmovie-card li
+        padding-bottom 10px
 
-            li
-                display block
-                margin-left auto
-                margin-right auto
-                padding-top 50.25%
-                position relative
-                width 90%
+    iframe
+        width 93% !important
 
-        iframe
-            height 100% !important
-            left 50%
-            /* height: 100%; */
-            /* max-width: 1000px; */
-            /* padding-top: 56.25%; */
-            position absolute
-            top -4%
-            transform translateX(-50%)
-            width 95% !important
-
-    @media (--sp: )
-        ul.card li
-            padding-bottom 10px
-
-        iframe
-            width 93% !important
-
-.caption
+ul.shortmovie-card .caption
     // font-size --font-size
     line-height 1
     padding-top 14px
