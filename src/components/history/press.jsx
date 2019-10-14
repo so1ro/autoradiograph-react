@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./css/press.styl";
 import { getPressList } from "./data/press";
+import { Picture } from "react-responsive-picture";
 
 class Press extends Component {
   state = { pressList: [] };
@@ -11,13 +12,12 @@ class Press extends Component {
 
   render() {
     const pressList = this.state.pressList;
-    console.log("pressList:", pressList);
     return (
       <ul className="press">
         {pressList.map(press => (
-          <li>
+          <li key={press._id}>
             <div>
-              <img src={press.imgUrl} alt={press.title} />
+              <Picture src={press.imgUrl} alt={press.title} />
               <span className="caption">
                 {press.title} <span className="date">( {press.date} )</span>
               </span>
