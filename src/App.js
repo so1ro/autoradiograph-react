@@ -9,9 +9,25 @@ import "./App.styl";
 import Footer from "./components/footer";
 import Print from "./components/print";
 import Contact from "./components/contact";
+import { thisExpression } from "@babel/types";
+
+import "./asset/geolocation";
 
 class App extends Component {
-  state = {};
+  state = {
+    geolocation: []
+  };
+
+  // componentDidMount() {
+  //   this.getGeolocation();
+  // }
+
+  // getGeolocation() {
+  //   fetch("https://geoip-db.com/jsonp", { mode: "cors" })
+  //     .then(result => result.json())
+  //     .then(result => this.setState({ geolocation: result }));
+  // }
+
   render() {
     return (
       <div className="App">
