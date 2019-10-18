@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Deployment
+
+`npm run build` / `serve -s build` / `git push heroku master` / `heroku open`
+
 ## Available Scripts
 
 In the project directory, you can run:
