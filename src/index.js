@@ -1,6 +1,6 @@
-import "core-js/es/map";
-import "core-js/es/set";
-import "raf/polyfill";
+// import "core-js/es/map";
+// import "core-js/es/set";
+// import "raf/polyfill";  使うにはnpmをインストールすること Edgeの表示に必要かも？一度外します。191020
 
 import React from "react";
 import ReactDOM from "react-dom";

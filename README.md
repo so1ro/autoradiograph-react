@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Deployment
 
-`npm run build` / `serve -s build` / `git push heroku master` / `heroku open`
+`heroku create` / `npm run build` / `serve -s build` / `git commit!!`/ `git push heroku master` / `heroku open`
 
 ## Available Scripts
 
