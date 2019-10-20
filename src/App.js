@@ -9,24 +9,39 @@ import "./App.styl";
 import Footer from "./components/footer";
 import Print from "./components/print";
 import Contact from "./components/contact";
-import { thisExpression } from "@babel/types";
-
-import "./asset/geolocation";
+import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
+// import { thisExpression } from "@babel/types";
 
 class App extends Component {
   state = {
-    geolocation: []
+    geolocation: ""
   };
 
-  // componentDidMount() {
-  //   this.getGeolocation();
-  // }
+  componentDidMount() {
+    const ipgeolocationApi = new IPGeolocationAPI(
+      "db9994189ecf42fbb9ded60137264847",
+      false
+    );
+    // Get complete geolocation for the calling machine's IP address
+    ipgeolocationApi.getGeolocation(this.handleResponse);
+    const checkCountry = document.querySelector("#checkCountry");
+    checkCountry.addEventListener("click", () => alert(this.state.geolocation));
+  }
 
-  // getGeolocation() {
-  //   fetch("https://geoip-db.com/jsonp", { mode: "cors" })
-  //     .then(result => result.json())
-  //     .then(result => this.setState({ geolocation: result }));
-  // }
+  // Function to handle response from IP Geolocation API
+  handleResponse = json => {
+    console.log(json);
+    console.log("json.country_code2:" + json.country_code2);
+    this.setState({ geolocation: json.country_code2 });
+  };
+
+  handleLike = movie => {
+    const movies = [...this.state.movies];
+    const index = movies.indexOf(movie);
+    movies[index] = { ...movies[index] };
+    movies[index].liked = !movies[index].liked;
+    this.setState({ movies });
+  };
 
   render() {
     return (

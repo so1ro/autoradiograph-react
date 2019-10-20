@@ -6,6 +6,7 @@ class Top extends Component {
     return (
       <div className="top">
         <h1>Top</h1>
+        <button id="checkCountry">Click here to check your country!!</button>
       </div>
     );
   }
