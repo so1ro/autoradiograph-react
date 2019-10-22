@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./css/nav.styl";
+import { getTexts } from "./data/nav-text";
 
 class Nav extends Component {
   state = {
@@ -18,33 +19,45 @@ class Nav extends Component {
     return `menu-trigger ${activeCheck}`;
   }
 
+  getTitle(path, lang) {
+    return lang === "jp" ? <img src={path} alt="放射線像" /> : path;
+  }
+
+  getJpClass(lang) {
+    return lang === "jp" ? " jp" : "";
+  }
+
   render() {
+    const lang = this.props.lang;
+    const texts = getTexts();
+    const selectedTexts = { ...texts[lang] };
+
     return (
       <React.Fragment>
         <nav className="gNav">
           {/* Logo */}
           <h1>
-            <Link to="/">Autoradiograph</Link>
+            <Link to="/">{this.getTitle(selectedTexts.title, lang)}</Link>
           </h1>
 
           {/* Links */}
-          <ul className="navLink">
+          <ul className={"navLink" + this.getJpClass(lang)}>
             <li>
               <NavLink to="/" exact>
-                Top
+                {selectedTexts.top}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/history">History</NavLink>
+              <NavLink to="/history">{selectedTexts.history}</NavLink>
             </li>
             <li>
-              <NavLink to="/shortmovie">Short movie</NavLink>
+              <NavLink to="/shortmovie">{selectedTexts.shortmovie}</NavLink>
             </li>
             <li>
-              <NavLink to="/print">Print</NavLink>
+              <NavLink to="/print">{selectedTexts.print}</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact">{selectedTexts.contact}</NavLink>
             </li>
             <li>
               <NavLink to="/">JP / EN</NavLink>

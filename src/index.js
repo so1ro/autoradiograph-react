@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-console.log("SUPERMAN", process.env.REACT_APP_NAME);
+// console.log("SUPERMAN", process.env.REACT_APP_NAME);
 
 ReactDOM.render(
   <BrowserRouter>

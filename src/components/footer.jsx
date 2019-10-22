@@ -3,28 +3,42 @@ import { NavLink } from "react-router-dom";
 import "./css/footer.styl";
 import iconFacebook from "./imgs/facebook.svg";
 import iconContact from "./imgs/contact.svg";
+import { getTexts } from "./data/footer-text";
 
 class Footer extends Component {
   state = {};
+
+  getTitle(path, lang) {
+    return lang === "jp" ? <img src={path} alt="放射線像" /> : path;
+  }
+
+  getJpClass(lang) {
+    return lang === "jp" ? " jp" : "";
+  }
+
   render() {
+    const lang = this.props.lang;
+    const texts = getTexts();
+    const selectedTexts = { ...texts[lang] };
+
     return (
       <footer>
         <nav className="fNav">
           {/* Links */}
-          <ul className="navLink">
+          <ul className={"navLink" + this.getJpClass(lang)}>
             <li>
               <NavLink to="/" exact>
-                Top
+                {selectedTexts.top}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/history">History</NavLink>
+              <NavLink to="/history">{selectedTexts.history}</NavLink>
             </li>
             <li>
-              <NavLink to="/shortmovie">Short movie</NavLink>
+              <NavLink to="/shortmovie">{selectedTexts.shortmovie}</NavLink>
             </li>
             <li>
-              <NavLink to="/print">Print</NavLink>
+              <NavLink to="/print">{selectedTexts.print}</NavLink>
             </li>
           </ul>
 
@@ -52,7 +66,7 @@ class Footer extends Component {
             </li>
           </ul>
         </nav>
-        <h1>Autoradiograph</h1>
+        <h1>{this.getTitle(selectedTexts.title, lang)}</h1>
         <div className="lang">JP / EN</div>
       </footer>
     );

@@ -14,7 +14,7 @@ import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 
 class App extends Component {
   state = {
-    geolocation: ""
+    lang: ""
   };
 
   componentDidMount() {
@@ -24,29 +24,21 @@ class App extends Component {
     );
     // Get complete geolocation for the calling machine's IP address
     ipgeolocationApi.getGeolocation(this.handleResponse);
-    const checkCountry = document.querySelector("#checkCountry");
-    checkCountry.addEventListener("click", () => alert(this.state.geolocation));
+
+    // const checkCountry = document.querySelector("#checkCountry");
+    // checkCountry.addEventListener("click", () => alert(this.state.lang));
   }
 
   // Function to handle response from IP Geolocation API
   handleResponse = json => {
-    console.log(json);
-    console.log("json.country_code2:" + json.country_code2);
-    this.setState({ geolocation: json.country_code2 });
-  };
-
-  handleLike = movie => {
-    const movies = [...this.state.movies];
-    const index = movies.indexOf(movie);
-    movies[index] = { ...movies[index] };
-    movies[index].liked = !movies[index].liked;
-    this.setState({ movies });
+    const lang = json.country_code2.toLowerCase();
+    this.setState({ lang }); //": 'en'"
   };
 
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Nav lang={this.state.lang} />
         <main>
           <Switch>
             <Route
@@ -74,7 +66,7 @@ class App extends Component {
             <Redirect to="/not-found" />
           </Switch>
         </main>
-        <Footer />
+        <Footer lang={this.state.lang} />
       </div>
     );
   }
