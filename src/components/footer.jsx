@@ -4,6 +4,7 @@ import "./css/footer.styl";
 import iconFacebook from "./imgs/facebook.svg";
 import iconContact from "./imgs/contact.svg";
 import { getTexts } from "./data/footer-text";
+import Lang from "./common/language";
 
 class Footer extends Component {
   state = {};
@@ -17,7 +18,7 @@ class Footer extends Component {
   }
 
   render() {
-    const lang = this.props.lang;
+    const { lang, onChnageLnag } = this.props;
     const texts = getTexts();
     const selectedTexts = { ...texts[lang] };
 
@@ -67,7 +68,7 @@ class Footer extends Component {
           </ul>
         </nav>
         <h1>{this.getTitle(selectedTexts.title, lang)}</h1>
-        <div className="lang">JP / EN</div>
+        <Lang onChnageLnag={onChnageLnag} />
       </footer>
     );
   }

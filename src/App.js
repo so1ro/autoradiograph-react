@@ -31,14 +31,19 @@ class App extends Component {
 
   // Function to handle response from IP Geolocation API
   handleResponse = json => {
-    const lang = json.country_code2.toLowerCase();
+    const geolocation = json.country_code2.toLowerCase();
+    const lang = geolocation === "jp" ? "jp" : "en";
     this.setState({ lang }); //": 'en'"
+  };
+
+  changeLang = lang => {
+    this.setState({ lang });
   };
 
   render() {
     return (
       <div className="App">
-        <Nav lang={this.state.lang} />
+        <Nav lang={this.state.lang} onChnageLnag={this.changeLang} />
         <main>
           <Switch>
             <Route
@@ -66,7 +71,7 @@ class App extends Component {
             <Redirect to="/not-found" />
           </Switch>
         </main>
-        <Footer lang={this.state.lang} />
+        <Footer lang={this.state.lang} onChnageLnag={this.changeLang} />
       </div>
     );
   }

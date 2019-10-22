@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./css/nav.styl";
 import { getTexts } from "./data/nav-text";
+import Lang from "./common/language";
 
 class Nav extends Component {
   state = {
@@ -28,7 +29,7 @@ class Nav extends Component {
   }
 
   render() {
-    const lang = this.props.lang;
+    const { lang, onChnageLnag } = this.props;
     const texts = getTexts();
     const selectedTexts = { ...texts[lang] };
 
@@ -59,8 +60,8 @@ class Nav extends Component {
             <li>
               <NavLink to="/contact">{selectedTexts.contact}</NavLink>
             </li>
-            <li>
-              <NavLink to="/">JP / EN</NavLink>
+            <li className="lang">
+              <Lang onChnageLnag={onChnageLnag} />
             </li>
           </ul>
 
