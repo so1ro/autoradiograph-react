@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./css/nav.styl";
 import { getTexts } from "./data/nav-text";
 import Lang from "./common/language";
+import { getJpClass } from "../components/common/getJpClass";
 
 class Nav extends Component {
   state = {
@@ -24,10 +25,6 @@ class Nav extends Component {
     return lang === "jp" ? <img src={path} alt="放射線像" /> : path;
   }
 
-  getJpClass(lang) {
-    return lang === "jp" ? " jp" : "";
-  }
-
   render() {
     const { lang, onChnageLnag } = this.props;
     const texts = getTexts();
@@ -42,7 +39,7 @@ class Nav extends Component {
           </h1>
 
           {/* Links */}
-          <ul className={"navLink" + this.getJpClass(lang)}>
+          <ul className={"navLink" + getJpClass(lang)}>
             <li>
               <NavLink to="/" exact>
                 {selectedTexts.top}

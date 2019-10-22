@@ -9,13 +9,22 @@ import Award from "./award";
 class History extends Component {
   state = {};
   render() {
+    const lang = this.props.lang;
     return (
       <section className="history">
-        {/* <h1>History</h1> */}
-        <Tab />
-        <Route path="/history/press" component={Press} />
-        <Route path="/history/exhibition" component={Exhibition} />
-        <Route path="/history/award" component={Award} />
+        <Tab lang={lang} />
+        <Route
+          path="/history/press"
+          component={props => <Press lang={lang} />}
+        />
+        <Route
+          path="/history/exhibition"
+          component={props => <Exhibition lang={lang} />}
+        />
+        <Route
+          path="/history/award"
+          component={props => <Award lang={lang} />}
+        />
         <Redirect from="/history" to="/history/press" />
       </section>
     );

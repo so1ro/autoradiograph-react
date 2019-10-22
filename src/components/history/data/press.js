@@ -54,151 +54,151 @@ const pressList = [
   {
     _id: 25,
     imgUrl: `${img25_2x} 2x, ${img25} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 24,
     imgUrl: `${img24_2x} 2x, ${img24} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 23,
     imgUrl: `${img23_2x} 2x, ${img23} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 22,
     imgUrl: `${img22_2x} 2x, ${img22} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 21,
     imgUrl: `${img21_2x} 2x, ${img21} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 20,
     imgUrl: `${img20_2x} 2x, ${img20} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 19,
     imgUrl: `${img19_2x} 2x, ${img19} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 18,
     imgUrl: `${img18_2x} 2x, ${img18} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 17,
     imgUrl: `${img17_2x} 2x, ${img17} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 16,
     imgUrl: `${img16_2x} 2x, ${img16} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 15,
     imgUrl: `${img15_2x} 2x, ${img15} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 14,
     imgUrl: `${img14_2x} 2x, ${img14} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "Mar. 2019"
   },
   {
     _id: 13,
     imgUrl: `${img13_2x} 2x, ${img13} 1x`,
-    title: "Asahi shimbun ",
+    title: { en: "Asahien: shimbun ", jp: "朝日新聞" },
     date: "Aug. 2015"
   },
   {
     _id: 12,
     imgUrl: `${img12_2x} 2x, ${img12} 1x`,
-    title: "Geijutsu Shincho",
+    title: { en: "Geijutsuen: Shincho", jp: "芸術新潮" },
     date: "May 2015"
   },
   {
     _id: 11,
     imgUrl: `${img11_2x} 2x, ${img11} 1x`,
-    title: "No Nukes",
+    title: { en: "No Nukes", jp: "ノーニュークス" },
     date: "Apr. 2015"
   },
   {
     _id: 10,
     imgUrl: `${img10_2x} 2x, ${img10} 1x`,
-    title: "Novy Chas",
+    title: { en: "Novy Chas", jp: "ノヴィー クス" },
     date: "Apr. 2015"
   },
   {
     _id: 9,
     imgUrl: `${img09_2x} 2x, ${img09} 1x`,
-    title: "de Volkskrant",
+    title: { en: "de Volkskrant", jp: "デ・フォルクスクラント" },
     date: "Apr. 2015"
   },
   {
     _id: 8,
     imgUrl: `${img08_2x} 2x, ${img08} 1x`,
-    title: "Dagens Nyheter",
+    title: { en: "Dagens Nyheter", jp: "ダーゲンス・ニュヘテル" },
     date: "Mar. 2015"
   },
   {
     _id: 7,
     imgUrl: `${img07_2x} 2x, ${img07} 1x`,
-    title: "National Post",
+    title: { en: "National Post", jp: "カナダ　ナショナルポスト" },
     date: "Feb. 2015"
   },
   {
     _id: 6,
     imgUrl: `${img06_2x} 2x, ${img06} 1x`,
-    title: "Morgenbladet",
+    title: { en: "Morgenbladet", jp: "モルゲンブラーデ" },
     date: "Nov. 2014"
   },
   {
     _id: 5,
     imgUrl: `${img05_2x} 2x, ${img05} 1x`,
-    title: "Big Issue Japan",
+    title: { en: "Big Issue Japan", jp: "ビッグイシュー" },
     date: "Nov. 2014"
   },
   {
     _id: 4,
     imgUrl: `${img04_2x} 2x, ${img04} 1x`,
-    title: "Hahanotomo",
+    title: { en: "Hahanotomo", jp: "母の友" },
     date: "Nov. 2014"
   },
   {
     _id: 3,
     imgUrl: `${img03_2x} 2x, ${img03} 1x`,
-    title: "Sekai",
+    title: { en: "Sekai", jp: "世界" },
     date: "July 2014"
   },
   {
     _id: 2,
     imgUrl: `${img02_2x} 2x, ${img02} 1x`,
-    title: "Reuter",
+    title: { en: "Reuter", jp: "ロイター" },
     date: "May 2014"
   },
   {
     _id: 1,
     imgUrl: `${img01_2x} 2x, ${img01} 1x`,
-    title: "Liberation",
+    title: { en: "Liberation", jp: "リベラシオン" },
     date: "Mar. 2014"
   }
 ];

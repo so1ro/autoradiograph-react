@@ -32,7 +32,7 @@ class App extends Component {
   // Function to handle response from IP Geolocation API
   handleResponse = json => {
     const geolocation = json.country_code2.toLowerCase();
-    const lang = geolocation === "jp" ? "jp" : "en";
+    const lang = geolocation === "jp" ? "jp" : "en"; //"en" : "jp"
     this.setState({ lang }); //": 'en'"
   };
 
@@ -48,7 +48,7 @@ class App extends Component {
           <Switch>
             <Route
               path="/history"
-              component={props => <History sortBy={"newest"} {...props} />}
+              component={props => <History lang={this.state.lang} {...props} />}
             />
             <Route
               path="/shortmovie"
