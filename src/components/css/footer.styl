@@ -44,34 +44,19 @@ footer
             text-align center
             width 8vw
 
-    @media (--tablet: )
+    @media (--sp2: )
         nav
             grid-auto-flow dense
+            grid-gap 3vw 4vw
             grid-template-columns repeat(10, 1fr)
             grid-template-rows repeat(2, 1fr)
 
+            ul li ~ li
+                margin-left nav-margin-pc * 2.2
+
         .navLink
-            grid-column 1 / 7
-            justify-self end
-
-            @media (--sp2: )
-                grid-column 1 / 8
-
-        .iconLink
-            justify-self start
-
-        .navCV
             grid-column 1 / -1
             justify-self center
-
-        .navCV
-            li a
-                width 12vw
-
-    @media (--sp: )
-        // padding 2vw common-pd // .gNav
-        .navLink
-            display none
 
         .iconLink
             grid-column 1 / -1
@@ -79,17 +64,20 @@ footer
             order 1
 
         .navCV
-            li ~ li
-                margin-left nav-margin-pc * 3
+            grid-column 1 / -1
+            justify-self center
 
+        .navCV
             li a
-                width 120px
+                width 100px
 
+    @media (--sp: )
         nav
-            grid-gap 4vw 4vw
+            grid-gap 20px 20px
+            margin-bottom 30px
 
-        nav ul li ~ li
-            margin-left nav-margin-pc * 2
+        .navLink
+            display none
 
     h1
         margin-bottom margin16
