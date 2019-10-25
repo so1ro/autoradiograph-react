@@ -5,16 +5,13 @@ import iconFacebook from "./imgs/facebook.svg";
 import iconContact from "./imgs/contact.svg";
 import { getTexts } from "./data/footer-text";
 import Lang from "./common/language";
+import { getJpClass } from "./common/getJpClass";
 
 class Footer extends Component {
   state = {};
 
   getTitle(path, lang) {
     return lang === "jp" ? <img src={path} alt="放射線像" /> : path;
-  }
-
-  getJpClass(lang) {
-    return lang === "jp" ? " jp" : "";
   }
 
   render() {
@@ -26,7 +23,7 @@ class Footer extends Component {
       <footer>
         <nav className="fNav">
           {/* Links */}
-          <ul className={"navLink" + this.getJpClass(lang)}>
+          <ul className={"navLink" + getJpClass(lang)}>
             <li>
               <NavLink to="/" exact>
                 {selectedTexts.top}

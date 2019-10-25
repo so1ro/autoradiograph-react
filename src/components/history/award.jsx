@@ -8,7 +8,7 @@ const Award = ({ lang }) => {
   return (
     <div className="award">
       {awardList.map(list => (
-        <h2>
+        <h2 key={list._id}>
           <span className="emp">{list.emp[lang]}</span>
           <span>{list.normal[lang]}</span>
         </h2>
