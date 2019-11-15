@@ -10,6 +10,7 @@ const Award = ({ lang }) => {
       {awardList.map(list => (
         <h2 key={list._id}>
           <span className="emp">{list.emp[lang]}</span>
+          <br className="sp" />
           <span>{list.normal[lang]}</span>
         </h2>
       ))}

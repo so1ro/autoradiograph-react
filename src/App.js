@@ -6,6 +6,7 @@ import History from "./components/history/history";
 import ShortMovie from "./components/shortmovie";
 import NotFound from "./components/not-found";
 import "./App.styl";
+import Landscape from "./components/landscape";
 import Footer from "./components/footer";
 import Print from "./components/print";
 import Contact from "./components/contact";
@@ -67,10 +68,15 @@ class App extends Component {
               )}
             />
             <Route path="/not-found" component={NotFound} />
-            <Route path="/" exact component={Top} />
+            <Route
+              path="/"
+              exact
+              component={props => <Top lang={this.state.lang} {...props} />}
+            />
             <Redirect to="/not-found" />
           </Switch>
         </main>
+        <Landscape lang={this.state.lang} />
         <Footer lang={this.state.lang} onChnageLnag={this.changeLang} />
       </div>
     );
