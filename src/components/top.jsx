@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Award from "./history/award";
+import "./css/top.styl";
+import MobileApp from "./top/mobileApp";
+import Summary from "./top/summary";
 
 class Top extends Component {
   state = {};
@@ -7,11 +10,11 @@ class Top extends Component {
   render() {
     const { lang } = this.props;
     return (
-      <div className="top">
+      <section className="top component">
         <Award lang={lang} />
-        {/* <h1>Top</h1> */}
-        {/* <button id="checkCountry">Click here to check your country!!</button> */}
-      </div>
+        <MobileApp lang={lang} />
+        <Summary lang={lang} />
+      </section>
     );
   }
 }

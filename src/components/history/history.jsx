@@ -11,7 +11,7 @@ class History extends Component {
   render() {
     const lang = this.props.lang;
     return (
-      <section className="history">
+      <section className="history component">
         <Tab lang={lang} />
         <Route
           path="/history/press"

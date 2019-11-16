@@ -3,7 +3,7 @@ import "./css/shortmovie.styl";
 
 const ShortMovie = () => {
   return (
-    <React.Fragment>
+    <section className="component">
       <ul className="shortmovie-card">
         <li>
           <iframe
@@ -46,7 +46,7 @@ const ShortMovie = () => {
           </div>
         </li>
       </ul>
-    </React.Fragment>
+    </section>
   );
 };
 

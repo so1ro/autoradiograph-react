@@ -3,9 +3,9 @@ import "./css/contact.styl";
 
 const Contact = () => {
   return (
-    <main className="contact">
+    <section className="contact component">
       <h1>Contact</h1>
-    </main>
+    </section>
   );
 };
 

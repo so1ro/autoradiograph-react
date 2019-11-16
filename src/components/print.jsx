@@ -3,9 +3,9 @@ import "./css/print.styl";
 
 const Print = () => {
   return (
-    <main className="print">
+    <section className="print component">
       <h1>Print</h1>
-    </main>
+    </section>
   );
 };
 
