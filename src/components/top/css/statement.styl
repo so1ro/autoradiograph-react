@@ -1,15 +1,17 @@
 @import '../../../asset/css/*'
 
+transtionSpeed = .6s
+
 section.statement
     margin 0 auto
-    max-height 190px
     max-width 840px
-    overflow hidden
     position relative
-    white-space pre-line
 
-    @media (--tablet: )
-        max-height 140px
+    p
+        max-height 200px
+        overflow hidden
+        transition transtionSpeed
+        white-space pre-line
 
     .cover
         background rgb(32, 36, 42)
@@ -18,24 +20,39 @@ section.statement
         height 140px
         left 0
         position absolute
+        transition transtionSpeed
         width 100%
-
-        @media (--tablet: )
-            max-height 100px
 
     img
         bottom 10px
         left 50%
         opacity .75
         position absolute
-        transform translateX(-50%)
+        transform translateX(-50%) rotate(360deg)
+        transition transtionSpeed
         width rfs(2.4375rem)
 
         @media (--sp: )
             bottom 20px
 
 section.statement.open
-    max-height auto
+    margin 0 auto rfs(56px)
+
+    p
+        max-height 580px
+        overflow hidden
+
+        // padding-bottom 40px
+        // padding-right 20px
+        @media (--tablet: )
+            padding-right 0
+
+    .cover
+        height 0
+
+    img
+        bottom rfs(-40px)
+        transform translateX(-50%) rotate(180deg)
 
 section.comments
     display grid
@@ -45,6 +62,7 @@ section.comments
     max-width 1000px
 
     .card
+        align-items center
         background baseBgColor01
         border-radius rfs(13px)
         display flex
@@ -86,6 +104,9 @@ section.comments
             background url('../imgs/mori@2x.png')
             background-size cover
 
+        .nameWrap
+            align-self flex-start
+
     @media (--tablet: )
         .card
             .avatar
@@ -121,3 +142,7 @@ section.comments
                 display inline-block
                 position relative
                 right auto
+
+            .nameWrap
+                align-self center
+                margin-top 5px
