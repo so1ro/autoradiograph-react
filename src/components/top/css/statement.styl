@@ -1,0 +1,123 @@
+@import '../../../asset/css/*'
+
+section.statement
+    margin 0 auto
+    max-height 190px
+    max-width 840px
+    overflow hidden
+    position relative
+    white-space pre-line
+
+    @media (--tablet: )
+        max-height 140px
+
+    .cover
+        background rgb(32, 36, 42)
+        background linear-gradient(0, rgba(32, 36, 42, 1) 0, rgba(32, 36, 42, 1) 40%, rgba(0, 0, 0, 0) 100%)
+        bottom 0
+        height 140px
+        left 0
+        position absolute
+        width 100%
+
+        @media (--tablet: )
+            max-height 100px
+
+    img
+        bottom 10px
+        left 50%
+        opacity .75
+        position absolute
+        transform translateX(-50%)
+        width rfs(2.4375rem)
+
+        @media (--sp: )
+            bottom 20px
+
+section.statement.open
+    max-height auto
+
+section.comments
+    display grid
+    grid-gap 55px
+    grid-template-columns repeat(2, 1fr)
+    margin 0 auto
+    max-width 1000px
+
+    .card
+        background baseBgColor01
+        border-radius rfs(13px)
+        display flex
+        flex-direction column
+        height 100%
+        max-width 450px
+        padding rfs(30px) rfs(40px)
+        position relative
+
+        .cardWrap
+            padding-right 15px
+
+        .comment
+            flex-grow 1
+            font-size rfs(1.5rem)
+            margin-bottom rfs(20px)
+            white-space pre-wrap
+
+        .name
+            font-size rfs(1.2rem)
+
+        .jobTitle
+            font-size rfs(.8rem)
+            opacity .6
+
+        .avatar
+            border-radius rfs(80px)
+            bottom -10px
+            height rfs(100px)
+            position absolute
+            right -15px
+            width rfs(100px)
+
+        .avatar.kagaya
+            background url('../imgs/kagaya@2x.png')
+            background-size cover
+
+        .avatar.mori
+            background url('../imgs/mori@2x.png')
+            background-size cover
+
+    @media (--tablet: )
+        .card
+            .avatar
+                height rfs(120px)
+                width rfs(120px)
+
+    @media (--sp2: )
+        display block
+
+        .cardWrap ~ .cardWrap
+            margin-top common-pd * 2
+
+        .card
+            .comment
+                margin-bottom rfs(40px)
+
+    @media (--sp3: )
+        .card
+            .avatar
+                border-radius rfs(160px)
+                height 92px
+                width 92px
+
+    @media (--sp: )
+        .card
+            text-align center
+
+            .comment
+                text-align left
+
+            .avatar
+                bottom auto
+                display inline-block
+                position relative
+                right auto

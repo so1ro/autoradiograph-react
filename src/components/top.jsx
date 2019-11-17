@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Award from "./history/award";
 import "./css/top.styl";
 import MobileApp from "./top/mobileApp";
-import Summary from "./top/summary";
+import Statement from "./top/statement";
 
 class Top extends Component {
   state = {};
@@ -10,11 +10,13 @@ class Top extends Component {
   render() {
     const { lang } = this.props;
     return (
-      <section className="top component">
-        <Award lang={lang} />
+      <div className="top">
+        <section>
+          <Award lang={lang} />
+        </section>
         <MobileApp lang={lang} />
-        <Summary lang={lang} />
-      </section>
+        <Statement lang={lang} />
+      </div>
     );
   }
 }
