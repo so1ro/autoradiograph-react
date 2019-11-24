@@ -1,4 +1,81 @@
 @import '../../../asset/css/*'
 
-div.mobileApp
+section.mobileApp
     background baseBgColor01
+    padding margin80 0
+
+    .wrap
+        // border 1px solid #ffff11
+        display grid
+        grid-auto-flow dense
+        grid-gap 24px 0
+        grid-template-columns repeat(2, 1fr)
+        grid-template-rows repeat(2, 1fr)
+        margin 0 auto
+        max-width 1000px
+
+        .text
+            // border 1px solid #ff1111
+            h1
+                margin-bottom common-pd * 1.5
+
+            p
+                font-size --font-size * 2
+
+        .movie
+            // border 1px solid #ff11dd
+            grid-column 2 / end
+            grid-row 1 / end
+            justify-self end
+
+            .tabletWrap
+                border rfs(43px) solid #20242A
+                border-radius rfs(36px)
+                max-width 458px
+
+            .spWrap
+                border rfs(36px) solid #20242A
+                border-radius rfs(36px)
+                display none
+                max-width 458px
+                width 90%
+
+            .tablet, .sp
+                background #4E5257
+
+            .video
+                width 100%
+
+            @media (--sp2: )
+                .tabletWrap
+                    display none
+
+                .spWrap
+                    display block
+
+        .banner img
+            max-height rfs(52px)
+
+        .banner img ~ img
+            margin-left rfs(20px)
+
+        .banner
+            // border 1px solid #ffff11
+
+    @media (--tablet: )
+        .wrap
+            grid-gap common-pd * 2
+            grid-template-columns 1fr
+            grid-template-rows auto
+            padding margin80 0
+            text-align center
+
+            .movie
+                display grid
+                grid-column auto
+                grid-row auto
+                justify-content center
+                justify-self center
+
+                .spWrap
+                    margin 0 auto
