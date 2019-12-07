@@ -2,27 +2,26 @@ import React, { Component } from "react";
 import "./css/mobileApp.styl";
 import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
-import tabVideo from "./videos/video_tb_jp.mp4";
-import smtVideo from "./videos/video_sp_jp.mp4";
-// import {videoScrollStart} from '../common/videoScrollStart';
+import { getVideos } from "./data/mobileApp.js";
 
 class MobileApp extends Component {
   state = {
-    videoPlay: false
+    videoPlay: false,
+    videoType: "mobile"
   };
-  // movie = React.createRef();
+
+  handleVideoType(type) {
+    this.setState({ videoType: type });
+    console.log(this.state.videoType);
+  }
+
+  getActive(className) {
+    return className + (this.state.videoType === className ? " active" : "");
+  }
 
   render() {
-    // const { videoPlay } = this.state;
-
-    // // const movie = document.querySelector(".movie");
-    // console.log("movie:", this.movie.current);
-
-    // document.addEventListener("scroll", () => {
-    //   let scrollY = window.scrollY;
-    //   let videoPositionY = 112;
-    //   console.log("scrollY:", scrollY);
-    // });
+    const { lang } = this.props;
+    const videos = getVideos();
 
     return (
       <section className="mobileApp">
@@ -39,17 +38,37 @@ class MobileApp extends Component {
             </p>
           </div>
           <div ref={this.movie} className="movie">
-            <video
-              className="tabletWrap"
-              loop
-              autoPlay
-              muted
-              src={tabVideo}
-              // loop={videoPlay}
-              // autoPlay={videoPlay}
-              // muted={videoPlay}
-            />
-            <video className="spWrap" src={smtVideo} loop autoPlay muted />
+            <figure>
+              <video
+                className={this.getActive("mobile")}
+                src={videos.sp[lang]}
+                loop
+                autoPlay
+                muted
+              />
+              <video
+                className={this.getActive("tablet")}
+                loop
+                autoPlay
+                muted
+                src={videos.tablet[lang]}
+              />
+            </figure>
+            <p>
+              <span
+                onClick={() => this.handleVideoType("mobile")}
+                className={this.getActive("mobile")}
+              >
+                mobile
+              </span>{" "}
+              /{" "}
+              <span
+                onClick={() => this.handleVideoType("tablet")}
+                className={this.getActive("tablet")}
+              >
+                tablet
+              </span>
+            </p>
           </div>
           <figure className="banner">
             <img src={bnrAppStore} alt="Apple Store" />
