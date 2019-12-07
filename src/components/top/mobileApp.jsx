@@ -3,6 +3,7 @@ import "./css/mobileApp.styl";
 import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
 import { getVideos } from "./data/mobileApp.js";
+import { getActive } from "../common/getActiveClass";
 
 class MobileApp extends Component {
   state = {
@@ -12,15 +13,15 @@ class MobileApp extends Component {
 
   handleVideoType(type) {
     this.setState({ videoType: type });
-    console.log(this.state.videoType);
   }
 
-  getActive(className) {
-    return className + (this.state.videoType === className ? " active" : "");
-  }
+  // getActive(className) {
+  //   return className + (this.state.videoType === className ? " active" : "");
+  // }
 
   render() {
     const { lang } = this.props;
+    const videoType = this.state.videoType;
     const videos = getVideos();
 
     return (
@@ -40,14 +41,14 @@ class MobileApp extends Component {
           <div ref={this.movie} className="movie">
             <figure>
               <video
-                className={this.getActive("mobile")}
+                className={"mobile" + getActive(videoType, "mobile")}
                 src={videos.sp[lang]}
                 loop
                 autoPlay
                 muted
               />
               <video
-                className={this.getActive("tablet")}
+                className={"tablet" + getActive(videoType, "tablet")}
                 loop
                 autoPlay
                 muted
@@ -57,14 +58,14 @@ class MobileApp extends Component {
             <p>
               <span
                 onClick={() => this.handleVideoType("mobile")}
-                className={this.getActive("mobile")}
+                className={"mobile" + getActive(videoType, "mobile")}
               >
                 mobile
               </span>{" "}
               /{" "}
               <span
                 onClick={() => this.handleVideoType("tablet")}
-                className={this.getActive("tablet")}
+                className={"tablet" + getActive(videoType, "tablet")}
               >
                 tablet
               </span>

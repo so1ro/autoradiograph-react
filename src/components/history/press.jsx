@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import "./css/press.styl";
 import { getPressList } from "./data/press";
 import { Picture } from "react-responsive-picture";
 import { getJpClass } from "../../components/common/getJpClass.js";
+import { getActive } from "../common/getActiveClass";
 
 class Press extends Component {
   state = { pressList: [...getPressList()] };
 
   render() {
     const pressList = this.state.pressList;
-    const lang = this.props.lang;
+    const { lang, tabSelect } = this.props;
 
     return (
-      <ul className="press">
+      <ul className={"press" + getActive(tabSelect, "press")}>
         {pressList.map(press => (
           <li key={press._id}>
             <div>
