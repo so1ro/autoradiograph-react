@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "../css/history.styl";
-import Tab from "./tabs";
+import "./css/history.styl";
+import Tab from "./history/tabs";
 // import { Route, Redirect } from "react-router-dom";
-import Press from "./press";
-import Exhibition from "./exhibition";
-import Award from "./award";
-import "./css/press.styl";
-import "./css/tabs.styl";
+import Press from "./history/press";
+import Exhibition from "./history/exhibition";
+import Award from "./history/award";
+import "./history/css/press.styl";
+import "./history/css/tabs.styl";
 
 class History extends Component {
   state = { tabSelect: "press" };

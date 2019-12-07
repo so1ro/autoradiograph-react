@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { NavLink } from "react-router-dom";
 import "./css/tabs.styl";
 import { getTabs } from "./data/tabs";
-import { getActive } from "../common/getActiveClass";
+import { getActive } from "../../components/common/getActiveClass";
 
 class Tab extends Component {
   state = {};

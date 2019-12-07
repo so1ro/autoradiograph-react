@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./components/nav";
-import Top from "./components/top";
-import History from "./components/history/history";
-import ShortMovie from "./components/shortmovie";
+import Top from "./pagers/top";
+import History from "./pagers/history";
+import ShortMovie from "./pagers/shortmovie";
 import NotFound from "./components/not-found";
 import "./App.styl";
 import Landscape from "./components/landscape";
 import Footer from "./components/footer";
-import Print from "./components/print";
-import Contact from "./components/contact";
+import Print from "./pagers/print";
+import Contact from "./pagers/contact";
 import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 // import { thisExpression } from "@babel/types";
 

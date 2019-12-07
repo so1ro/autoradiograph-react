@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Award from "./history/award";
+import Award from "../components/history/award";
 import "./css/top.styl";
 import MobileApp from "./top/mobileApp";
 import Statement from "./top/statement";

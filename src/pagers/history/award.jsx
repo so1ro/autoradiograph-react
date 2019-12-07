@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/award.styl";
 import { getAwardList } from "./data/award";
-import { getActive } from "../common/getActiveClass";
+import { getActive } from "../../components/common/getActiveClass";
 
 const Award = ({ lang, tabSelect }) => {
   const awardList = [...getAwardList()];

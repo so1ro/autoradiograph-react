@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { getExhibitionList } from "./data/exhibition";
 import "./css/exhibition.styl";
-import { getJpClass } from "../common/getJpClass";
-import { getActive } from "../common/getActiveClass";
+import { getActive } from "../../components/common/getActiveClass";
+import { getJpClass } from "../../components/common/getJpClass";
 
 class Exhibition extends Component {
   render() {

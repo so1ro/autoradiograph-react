@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./css/mobileApp.styl";
 import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
-import { getVideos } from "./data/mobileApp.js";
-import { getActive } from "../common/getActiveClass";
+import { getVideos } from "./data/mobileApp";
+import { getActive } from "../../components/common/getActiveClass";
 
 class MobileApp extends Component {
   state = {

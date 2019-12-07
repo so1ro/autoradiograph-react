@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { getPressList } from "./data/press";
 import { Picture } from "react-responsive-picture";
 import { getJpClass } from "../../components/common/getJpClass.js";
-import { getActive } from "../common/getActiveClass";
+import { getActive } from "../../components/common/getActiveClass";
 
 class Press extends Component {
   state = { pressList: [...getPressList()] };
