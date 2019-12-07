@@ -13,31 +13,28 @@ class Tab extends Component {
     return (
       <ul className="historyTabs">
         <li>
-          <a
-            href="#j"
+          <span
             onClick={() => onHandleTab("press")}
             className={getActive(tabSelect, "press")}
           >
             {press[lang]}
-          </a>
+          </span>
         </li>
         <li>
-          <a
-            href="#j"
+          <span
             onClick={() => onHandleTab("exhibition")}
             className={getActive(tabSelect, "exhibition")}
           >
             {exhibition[lang]}
-          </a>
+          </span>
         </li>
         <li>
-          <a
-            href="#j"
+          <span
             onClick={() => onHandleTab("award")}
             className={getActive(tabSelect, "award")}
           >
             {award[lang]}
-          </a>
+          </span>
         </li>
       </ul>
     );

@@ -1,3 +1,3 @@
-export function getActive(select, className) {
-  return select === className ? " active" : "";
+export function getActive(select, className, ...rest) {
+  return select === className ? rest + " active" : rest;
 }
