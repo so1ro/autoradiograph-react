@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./css/mobileApp.styl";
 import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
-import { getVideos } from "./data/mobileApp";
+import { videos } from "./data/mobileApp";
 import { getActive } from "../../components/common/getActiveClass";
 
 class MobileApp extends Component {
@@ -15,14 +15,9 @@ class MobileApp extends Component {
     this.setState({ videoType: type });
   }
 
-  // getActive(className) {
-  //   return className + (this.state.videoType === className ? " active" : "");
-  // }
-
   render() {
     const { lang } = this.props;
     const videoType = this.state.videoType;
-    const videos = getVideos();
 
     return (
       <section className="mobileApp">
@@ -47,7 +42,7 @@ class MobileApp extends Component {
                 autoPlay
                 muted
                 playsinline
-                poster={videos.posterSp[lang]}
+                // poster={videos.posterSp[lang]}
               />
               <video
                 className={"tablet" + getActive(videoType, "tablet")}
@@ -56,7 +51,7 @@ class MobileApp extends Component {
                 autoPlay
                 muted
                 playsinline
-                poster={videos.posterTablet[lang]}
+                // poster={videos.posterTablet[lang]}
               />
             </figure>
             <p>

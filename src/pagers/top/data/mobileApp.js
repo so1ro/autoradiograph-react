@@ -8,13 +8,9 @@ import poster_sp_jp from "../imgs/poster_sp_jp.png";
 import poster_tb_en from "../imgs/poster_tb_en.png";
 import poster_tb_jp from "../imgs/poster_tb_jp.png";
 
-const videos = {
+export const videos = {
   sp: { en: video_sp_en, jp: video_sp_jp },
   tablet: { en: video_tb_en, jp: video_tb_jp },
   posterSp: { en: poster_sp_en, jp: poster_sp_jp },
   posterTablet: { en: poster_tb_en, jp: poster_tb_jp }
 };
-
-export function getVideos() {
-  return videos;
-}
