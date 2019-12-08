@@ -18,6 +18,7 @@ const texts = {
     contact: "コンタクト" //"Contact"
   }
 };
+
 export function getTexts() {
   return texts;
 }

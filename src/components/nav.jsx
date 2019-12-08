@@ -34,7 +34,7 @@ class Nav extends Component {
       <React.Fragment>
         <nav className="gNav">
           {/* Logo */}
-          <h1>
+          <h1 className={getJpClass(lang)}>
             <Link to="/">{this.getTitle(selectedTexts.title, lang)}</Link>
           </h1>
 
@@ -51,9 +51,9 @@ class Nav extends Component {
             <li>
               <NavLink to="/shortmovie">{selectedTexts.shortmovie}</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/print">{selectedTexts.print}</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/contact">{selectedTexts.contact}</NavLink>
             </li>

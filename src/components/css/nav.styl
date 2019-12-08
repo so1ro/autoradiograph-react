@@ -7,16 +7,17 @@
     grid-auto-flow column
     grid-gap 5px common-pd
     grid-template-columns 1fr
-    padding .8vw common-pd
+    padding 1vw common-pd
 
     h1
+        font-size 2rem
+        font-weight normal
         justify-self start
+        margin-bottom 0
+        padding-top 2px
 
         a
             display grid
-
-            img
-                margin 5px 0
 
         img
             max-width 100%
@@ -29,6 +30,12 @@
 
             @media (--sp: )
                 max-width 56%
+
+        @media (--sp: )
+            font-size 20px
+
+    h1.jp
+        padding-top 0
 
     ul
         align-items center

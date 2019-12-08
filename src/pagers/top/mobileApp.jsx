@@ -46,13 +46,17 @@ class MobileApp extends Component {
                 loop
                 autoPlay
                 muted
+                playsinline
+                poster={videos.posterSp[lang]}
               />
               <video
                 className={"tablet" + getActive(videoType, "tablet")}
+                src={videos.tablet[lang]}
                 loop
                 autoPlay
                 muted
-                src={videos.tablet[lang]}
+                playsinline
+                poster={videos.posterTablet[lang]}
               />
             </figure>
             <p>
