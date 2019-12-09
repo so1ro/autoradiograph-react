@@ -15,10 +15,12 @@ section.mobileApp
 
         .text
             h1
-                margin-bottom common-pd * 1.5
+                margin-bottom common-pd * 2
 
             p
-                font-size --font-size * 2
+                font-size --font-size * 1.6
+                line-height 2
+                white-space pre-wrap
 
         .movie
             grid-column 2 / end
@@ -61,10 +63,24 @@ section.mobileApp
                 span:hover
                     color activeColor
 
-        .banner img
-            max-height rfs(48px)
+        .banner
+            img
+                max-height rfs(48px)
 
-        .banner img ~ img
+            .price
+                padding-bottom common-pd * 1
+
+                // padding-top common-pd * 2
+                .strike_through
+                    color activeColor
+                    font-family serif, 'Sawarabi Mincho'
+                    text-decoration line-through
+
+                .emp
+                    font-family serif, 'Sawarabi Mincho'
+                    font-size 2.4rem
+
+        .banner a ~ a
             margin-left rfs(20px)
 
     @media (--tablet: )
@@ -74,6 +90,10 @@ section.mobileApp
             grid-template-rows auto
             padding margin80 0
             text-align center
+
+            @media (--sp: )
+                .text p
+                    text-align left
 
             .movie
                 display grid

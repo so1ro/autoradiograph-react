@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./css/mobileApp.styl";
 import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
-import { videos } from "./data/mobileApp";
+import { videos, sentences } from "./data/mobileApp";
 import { getActive } from "../../components/common/getActiveClass";
 
 class MobileApp extends Component {
@@ -23,15 +23,8 @@ class MobileApp extends Component {
       <section className="mobileApp">
         <div className="wrap">
           <div className="text">
-            <h1>App</h1>
-            <p>
-              You can see all of archives
-              <br />
-              through Autoradiograph App
-              <br />
-              <br />
-              $20
-            </p>
+            <h1>{sentences.title[lang]}</h1>
+            <p>{sentences.explain[lang]}</p>
           </div>
           <div ref={this.movie} className="movie">
             <figure>
@@ -71,8 +64,26 @@ class MobileApp extends Component {
             </p>
           </div>
           <figure className="banner">
-            <img src={bnrAppStore} alt="Apple Store" />
-            <img src={bnrGooglePlay} alt="Google Play" />
+            <p className="price">
+              <span className="strike_through">{sentences.price[lang]}</span>
+              {` `}&#8594;
+              <span className="emp"> {sentences.discountedPrice[lang]}</span>
+              {sentences.unit[lang]} (50%off)
+            </p>
+            <a
+              href={sentences.links.ios[lang]}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img src={bnrAppStore} alt="Apple Store" />
+            </a>
+            <a
+              href={sentences.links.android[lang]}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img src={bnrGooglePlay} alt="Google Play" />
+            </a>
           </figure>
         </div>
       </section>
