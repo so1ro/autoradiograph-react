@@ -1,7 +1,79 @@
 const exhibitionList = [
   {
+    _id: 29,
+    date: { en: "Sep. 2019", jp: "2019 / 9" },
+    place: {
+      en: "Korea Seoul / MMCA - Gathering",
+      jp: "韓国ソウル / 韓国国立現代美術館主催「Gathering」"
+    }
+  },
+  {
+    _id: 28,
+    date: { en: "Sep. 2019", jp: "2019 / 9" },
+    place: {
+      en: "Italia / Getxophoto Festival",
+      jp: "イタリア / Getxophoto Festival"
+    }
+  },
+  {
+    _id: 27,
+    date: { en: "Sep. 2018", jp: "2018 / 9" },
+    place: {
+      en: "Netherlands / BredaPhoto Festival",
+      jp: "オランダ / BredaPhoto Festival"
+    }
+  },
+  {
+    _id: 26,
+    date: { en: "Apr. 2018", jp: "2018 / 4" },
+    place: {
+      en: "Ukraine Zhytomyr Polytechnic State University",
+      jp: "ウクライナ / ジトミール工科大学"
+    }
+  },
+  {
+    _id: 25,
+    date: { en: "Apr. 2018", jp: "2018 / 4" },
+    place: {
+      en: "Hiroshima city",
+      jp: "広島県広島市 旧日銀広島支店"
+    }
+  },
+  {
+    _id: 24,
+    date: { en: "Dec. 2017", jp: "2017 / 12" },
+    place: {
+      en: "China / Lianzhou Foto Festival",
+      jp: "中国 / 連州国際写真祭"
+    }
+  },
+  {
+    _id: 23,
+    date: { en: "Sep. 2017", jp: "2017 / 9" },
+    place: {
+      en: "Austria / Ars Electronica",
+      jp: "オーストリア / Ars Electronica"
+    }
+  },
+  {
+    _id: 22,
+    date: { en: "Mar. 2017", jp: "2017 / 3" },
+    place: {
+      en: "England / FORMAT Photography Festival",
+      jp: "England / FORMAT Photography Festival"
+    }
+  },
+  {
+    _id: 21,
+    date: { en: "Mar. 2017", jp: "2017 / 3" },
+    place: {
+      en: "Tokyo / Symposium in Hosei university",
+      jp: "法政大学 / 日本野鳥の会主催 シンポジウム"
+    }
+  },
+  {
     _id: 20,
-    date: { en: "Oct. 2016", jp: "2016 / 10" },
+    date: { en: "Oct. 2017", jp: "2017 / 10" },
     place: {
       en: "Higashimatsuyama city in Saitama",
       jp: "埼玉県東松山市 / 「みる・知る・くらす展」"

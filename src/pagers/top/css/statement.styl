@@ -11,7 +11,7 @@ section.statement
         max-height 200px
         overflow hidden
         transition transtionSpeed
-        white-space pre-line
+        white-space pre-wrap
 
     .cover
         background rgb(32, 36, 42)
@@ -40,7 +40,7 @@ section.statement.open
     margin 0 auto rfs(56px)
 
     p
-        max-height 580px
+        max-height 960px
         overflow hidden
 
         // padding-bottom 40px
@@ -63,7 +63,7 @@ section.comments
     max-width 1000px
 
     .card
-        align-items center
+        // align-items center
         background baseBgColor01
         border-radius rfs(13px)
         display flex
@@ -78,7 +78,7 @@ section.comments
 
         .comment
             flex-grow 1
-            font-size rfs(1.5rem)
+            font-size rfs(1.2rem)
             margin-bottom rfs(20px)
             white-space pre-wrap
 
@@ -87,7 +87,12 @@ section.comments
 
         .jobTitle
             font-size rfs(.8rem)
+            line-height .65
+            line-height 1.4
+            // margin-top 8px
             opacity .6
+            white-space pre-wrap
+            width 80%
 
         .avatar
             border-radius rfs(80px)
@@ -104,9 +109,6 @@ section.comments
         .avatar.mori
             background url('../imgs/mori@2x.png')
             background-size cover
-
-        .nameWrap
-            align-self flex-start
 
     @media (--tablet: )
         .card
@@ -133,6 +135,7 @@ section.comments
 
     @media (--sp: )
         .card
+            align-items center
             text-align center
 
             .comment
@@ -147,3 +150,6 @@ section.comments
             .nameWrap
                 align-self center
                 margin-top 5px
+
+            .jobTitle
+                width 100%

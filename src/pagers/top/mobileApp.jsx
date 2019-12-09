@@ -41,7 +41,7 @@ class MobileApp extends Component {
                 loop
                 autoPlay
                 muted
-                playsinline
+                playsInline
                 // poster={videos.posterSp[lang]}
               />
               <video
@@ -50,7 +50,7 @@ class MobileApp extends Component {
                 loop
                 autoPlay
                 muted
-                playsinline
+                playsInline
                 // poster={videos.posterTablet[lang]}
               />
             </figure>
