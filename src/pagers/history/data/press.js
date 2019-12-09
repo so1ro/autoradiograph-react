@@ -1,3 +1,4 @@
+import img26 from "./imgs/26.jpg";
 import img25 from "./imgs/25.jpg";
 import img24 from "./imgs/24.jpg";
 import img23 from "./imgs/23.jpg";
@@ -24,6 +25,7 @@ import img03 from "./imgs/03.jpg";
 import img02 from "./imgs/02.jpg";
 import img01 from "./imgs/01.jpg";
 
+import img26_2x from "./imgs/26@2x.jpg";
 import img25_2x from "./imgs/25@2x.jpg";
 import img24_2x from "./imgs/24@2x.jpg";
 import img23_2x from "./imgs/23@2x.jpg";
@@ -52,81 +54,87 @@ import img01_2x from "./imgs/01@2x.jpg";
 
 const pressList = [
   {
-    _id: 25,
+    _id: 26,
     imgUrl: `${img25_2x} 2x, ${img25} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "Tokyo shimbun", jp: "東京新聞" },
+    date: "July 2019"
+  },
+  {
+    _id: 25,
+    imgUrl: `${img24_2x} 2x, ${img24} 1x`,
+    title: { en: "NHK Documentary", jp: "NHKスペシャル" },
+    date: "Mar. 2018"
   },
   {
     _id: 24,
-    imgUrl: `${img24_2x} 2x, ${img24} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    imgUrl: `${img23_2x} 2x, ${img23} 1x`,
+    title: { en: "FOTOMEN", jp: "撮影之友" },
+    date: "Feb. 2018"
   },
   {
     _id: 23,
-    imgUrl: `${img23_2x} 2x, ${img23} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    imgUrl: `${img22_2x} 2x, ${img22} 1x`,
+    title: { en: " Science et Avenir", jp: " Science et Avenir" },
+    date: "Nov. 2017"
   },
   {
     _id: 22,
-    imgUrl: `${img22_2x} 2x, ${img22} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    imgUrl: `${img21_2x} 2x, ${img21} 1x`,
+    title: { en: "fisheye magazine", jp: "fisheye magazine" },
+    date: "Nov. 2017"
   },
   {
     _id: 21,
-    imgUrl: `${img21_2x} 2x, ${img21} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    imgUrl: `${img26_2x} 2x, ${img26} 1x`,
+    title: { en: "Slate.fr", jp: "Slate.fr" },
+    date: "Nov. 2017"
   },
   {
     _id: 20,
     imgUrl: `${img20_2x} 2x, ${img20} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "fisheye magazine", jp: "fisheye magazine" },
+    date: "Mar. 2017"
   },
   {
     _id: 19,
     imgUrl: `${img19_2x} 2x, ${img19} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "Le Monde", jp: "Le Monde" },
+    date: "Mar. 2017"
   },
   {
     _id: 18,
     imgUrl: `${img18_2x} 2x, ${img18} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "Le Monde", jp: "Le Monde" },
+    date: "Mar. 2017"
   },
   {
     _id: 17,
     imgUrl: `${img17_2x} 2x, ${img17} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "GEO", jp: "GEO" },
+    date: "Aug. 2016"
   },
   {
     _id: 16,
     imgUrl: `${img16_2x} 2x, ${img16} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "China Post (TW)", jp: "China Post (TW)" },
+    date: "Apr. 2016"
   },
   {
     _id: 15,
     imgUrl: `${img15_2x} 2x, ${img15} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "Tagesspiegel ", jp: "Tagesspiegel " },
+    date: "Mar. 2016"
   },
   {
     _id: 14,
     imgUrl: `${img14_2x} 2x, ${img14} 1x`,
-    title: { en: "Sekai", jp: "世界" },
-    date: "Mar. 2019"
+    title: { en: "NHK Documentary", jp: "NHKスペシャル" },
+    date: "Mar. 2016"
   },
   {
     _id: 13,
     imgUrl: `${img13_2x} 2x, ${img13} 1x`,
-    title: { en: "Asahien: shimbun ", jp: "朝日新聞" },
+    title: { en: "Asahi shimbun", jp: "朝日新聞" },
     date: "Aug. 2015"
   },
   {
