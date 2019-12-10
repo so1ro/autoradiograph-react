@@ -33,6 +33,7 @@
 
         @media (--sp: )
             font-size 20px
+            z-index 2
 
     h1.jp
         padding-top 0
@@ -67,6 +68,9 @@
             text-align center
             width 8vw
 
+        @media (--sp: )
+            z-index 2
+
     @media (--tablet: )
         grid-auto-flow dense
         grid-template-columns 1fr 1fr // .gNav
@@ -88,18 +92,37 @@
         .navLink
             display none
 
+            li
+                animation fadeIn 1s
+
+            &.active
+                align-content center
+                background #000
+                display grid
+                font-size 1.2rem
+                grid-gap rfs(30px)
+                height 100vh
+                justify-items center
+                left 0
+                position fixed
+                top 0
+                width 100%
+                z-index 1
+
         .navCV
             li a
                 width 64px
 
 .spMenu
     align-items center
-    background rgba(#000, .5)
+    background rgba(#000, .7)
+    bottom rfs(20px)
     color #fff
     display none
     grid-template-columns auto auto
     justify-items center
     padding 10px 10px 12px
+    position fixed
     width 120px
 
     h3
@@ -108,6 +131,19 @@
 
     @media (--sp: )
         display grid
+        z-index 2
+
+/* =====================
+  sp時 navlink fadeIn
+===================== */
+@keyframes fadeIn
+    0%
+        opacity 0
+        transform translateY(10px)
+
+    100%
+        opacity 1
+        transform translateY(0)
 
 /* =====================
   .spMenu Hamburg animation
@@ -122,6 +158,9 @@
     height 20px
     position relative
     width 28px
+
+    &:focus
+        outline none
 
 .menu-trigger span
     background-color #fff

@@ -19,9 +19,9 @@ export const videos = {
 export const sentences = {
   title: { en: "App", jp: "アプリ" },
   explain: {
-    en: "You can see all of archives\nthrough Autoradiograph App.",
+    en: "You can see all of archives through Autoradiograph App.",
     jp:
-      "すべての放射線像をご覧いただくことができます。\n拡大縮小・色の反転・3次元放射線像の操作・採取地の表示などアプリにしか実現することができない機能が備わっています。"
+      "すべての放射線像をご覧いただくことができます。拡大縮小・色の反転・3次元放射線像の操作・採取地の表示などアプリにしか実現することができない機能が備わっています。"
   },
   discountedPrice: { en: "$13.99", jp: "1480" },
   price: { en: "$27.98", jp: "2960円" },

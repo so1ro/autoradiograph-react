@@ -1,25 +1,32 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./css/nav.styl";
-import { getTexts } from "./data/nav-text";
 import Lang from "./common/language";
 import { getJpClass } from "../components/common/getJpClass";
+import disableScroll from "disable-scroll";
+
+import { getTexts } from "./data/nav-text";
+import "./css/nav.styl";
 
 class Nav extends Component {
   state = {
     spMenuActive: false
   };
 
-  onSpMenuHandle = () => {
+  onSpMenuHandle = off => {
+    if (off) {
+      disableScroll.off(); // re-enable scroll
+      return this.setState({ spMenuActive: false });
+    }
     let spMenuActive = this.state.spMenuActive;
     spMenuActive = !spMenuActive;
     this.setState({ spMenuActive });
+    spMenuActive ? disableScroll.on() : disableScroll.off();
   };
 
-  getSpMenuClasses() {
+  getSpMenuClasses = () => {
     let activeCheck = this.state.spMenuActive ? "active" : "";
     return `menu-trigger ${activeCheck}`;
-  }
+  };
 
   getTitle(path, lang) {
     return lang === "jp" ? <img src={path} alt="放射線像" /> : path;
@@ -29,32 +36,42 @@ class Nav extends Component {
     const { lang, onChnageLnag } = this.props;
     const texts = getTexts();
     const selectedTexts = { ...texts[lang] };
+    const { getTitle, onSpMenuHandle, getSpMenuClasses } = this;
 
     return (
       <React.Fragment>
         <nav className="gNav">
           {/* Logo */}
-          <h1 className={getJpClass(lang)}>
-            <Link to="/">{this.getTitle(selectedTexts.title, lang)}</Link>
+          <h1
+            className={getJpClass(lang)}
+            onClick={() => onSpMenuHandle("off")}
+          >
+            <Link to="/">{getTitle(selectedTexts.title, lang)}</Link>
           </h1>
 
           {/* Links */}
-          <ul className={"navLink" + getJpClass(lang)}>
-            <li>
+          <ul
+            className={
+              "navLink" +
+              getJpClass(lang) +
+              (this.state.spMenuActive ? " active" : "")
+            }
+          >
+            <li onClick={() => onSpMenuHandle("off")}>
               <NavLink to="/" exact>
                 {selectedTexts.top}
               </NavLink>
             </li>
-            <li>
+            <li onClick={() => onSpMenuHandle("off")}>
               <NavLink to="/history">{selectedTexts.history}</NavLink>
             </li>
-            <li>
+            <li onClick={() => onSpMenuHandle("off")}>
               <NavLink to="/shortmovie">{selectedTexts.shortmovie}</NavLink>
             </li>
-            {/* <li>
+            {/* <li onClick={() => onSpMenuHandle("off")}>
               <NavLink to="/print">{selectedTexts.print}</NavLink>
             </li> */}
-            <li>
+            <li onClick={() => onSpMenuHandle("off")}>
               <NavLink to="/contact">{selectedTexts.contact}</NavLink>
             </li>
             <li className="lang">
@@ -76,8 +93,8 @@ class Nav extends Component {
         <nav className="spMenu">
           <h3>Menu</h3>
           <button
-            onClick={() => this.onSpMenuHandle()}
-            className={this.getSpMenuClasses()}
+            onClick={() => onSpMenuHandle()}
+            className={getSpMenuClasses()}
           >
             <span></span>
             <span></span>

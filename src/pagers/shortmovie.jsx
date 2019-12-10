@@ -8,11 +8,11 @@ const ShortMovie = () => {
         <li>
           <iframe
             src="https://player.vimeo.com/video/289985456"
-            frameborder="0"
+            frameBorder="0"
             width="700"
             height="393"
             allow="autoplay; fullscreen"
-            allowfullscreen
+            allowFullScreen
             title="How to take Autoradiograph"
           ></iframe>
           <div className="caption">How to take Autoradiograph</div>
@@ -20,11 +20,11 @@ const ShortMovie = () => {
         <li>
           <iframe
             src="https://player.vimeo.com/video/173840339"
-            frameborder="0"
+            frameBorder="0"
             width="700"
             height="393"
             allow="autoplay; fullscreen"
-            allowfullscreen
+            allowFullScreen
             title="How to take Autoradiograph"
           ></iframe>
           <div className="caption">
@@ -34,11 +34,11 @@ const ShortMovie = () => {
         <li>
           <iframe
             src="https://player.vimeo.com/video/180967760"
-            frameborder="0"
+            frameBorder="0"
             width="700"
             height="393"
             allow="autoplay; fullscreen"
-            allowfullscreen
+            allowFullScreen
             title="How to take Autoradiograph"
           ></iframe>
           <div className="caption">
