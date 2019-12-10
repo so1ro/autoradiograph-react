@@ -68,7 +68,7 @@ class MobileApp extends Component {
             <p className="price">
               <span className="strike_through">{sentences.price[lang]}</span>
               {` `}&#8594;
-              <span className="emp"> {sentences.discountedPrice[lang]}</span>
+              <span className="emp">{sentences.discountedPrice[lang]}</span>
               {sentences.unit[lang]} (50%off)
             </p>
             <a

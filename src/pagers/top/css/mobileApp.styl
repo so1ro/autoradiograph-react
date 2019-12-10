@@ -2,7 +2,6 @@
 
 section.mobileApp
     background baseBgColor01
-    padding margin80 0
 
     .wrap
         display grid
@@ -34,27 +33,21 @@ section.mobileApp
             justify-self end
             text-align center
 
-            video.mobile
+            video
                 border rfs(18px) solid #20242A
                 border-radius rfs(36px)
                 display none
                 max-width 458px
-                width 90%
-
-            video.mobile.active
-                display inline-block
-
-            video.tablet
-                border rfs(24px) solid #20242A
-                border-radius rfs(36px)
-                display none
-                max-width 458px
-
-            video.tablet.active
-                display inline-block
-
-            video
                 width 100%
+
+                &.mobile
+                    width 90%
+
+                &.mobile.active
+                    display inline-block
+
+                &.tablet.active
+                    display inline-block
 
             figure
                 margin-bottom rfs(6px)
@@ -100,7 +93,6 @@ section.mobileApp
             grid-gap common-pd * 2
             grid-template-columns 1fr
             grid-template-rows auto
-            padding margin80 0
             text-align center
 
             @media (--sp: )
