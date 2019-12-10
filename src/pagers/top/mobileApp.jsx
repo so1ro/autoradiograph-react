@@ -4,6 +4,7 @@ import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
 import { videos, sentences } from "./data/mobileApp";
 import { getActive } from "../../components/common/getActiveClass";
+import { getJpClass } from "../../components/common/getJpClass";
 
 class MobileApp extends Component {
   state = {
@@ -24,7 +25,7 @@ class MobileApp extends Component {
         <div className="wrap">
           <div className="text">
             <h1>{sentences.title[lang]}</h1>
-            <p>{sentences.explain[lang]}</p>
+            <p className={getJpClass(lang)}>{sentences.explain[lang]}</p>
           </div>
           <div ref={this.movie} className="movie">
             <figure>

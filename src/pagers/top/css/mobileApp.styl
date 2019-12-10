@@ -15,12 +15,18 @@ section.mobileApp
 
         .text
             h1
-                margin-bottom common-pd * 2
+                font-size 2.4rem
+                font-weight normal
+                margin-bottom rfs(28px)
 
             p
-                font-size --font-size * 1.6
-                line-height 2
+                font-size 1.6rem
+                line-height 1.6
                 white-space pre-wrap
+
+                &.jp
+                    font-size 1.2rem
+                    line-height 2
 
         .movie
             grid-column 2 / end
@@ -50,7 +56,11 @@ section.mobileApp
             video
                 width 100%
 
+            figure
+                margin-bottom rfs(6px)
+
             p
+                font-size 1.4rem
                 text-align center
 
                 .tablet.active, .mobile.active
@@ -68,12 +78,14 @@ section.mobileApp
                 max-height rfs(48px)
 
             .price
-                padding-bottom common-pd * 1
+                letter-spacing .06rem
+                padding-bottom rfs(20px)
 
                 // padding-top common-pd * 2
                 .strike_through
                     color activeColor
                     font-family serif, 'Sawarabi Mincho'
+                    font-size 1.4rem
                     text-decoration line-through
 
                 .emp
