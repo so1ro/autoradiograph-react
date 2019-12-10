@@ -4,7 +4,7 @@ const exhibitionList = [
     date: { en: "Sep. 2019", jp: "2019 / 9" },
     place: {
       en: "Korea Seoul / MMCA - Gathering",
-      jp: "韓国ソウル / 韓国国立現代美術館主催「Gathering」"
+      jp: "韓国 / 韓国国立現代美術館主催「Gathering」"
     }
   },
   {
