@@ -2,6 +2,7 @@
 // import "core-js/es/set";
 // import "raf/polyfill";  使うにはnpmをインストールすること Edgeの表示に必要かも？一度外します。191020
 
+import "react-app-polyfill/ie11";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
