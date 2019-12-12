@@ -27,9 +27,6 @@ ul.exhibition
     li.place
         padding 0 24px
 
-    li.place.jp
-        font-family YakuHanMP, '游明朝', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HG明朝E', 'ＭＳ 明朝', serif
-
     @media (--sp3: )
         grid-template-columns 1fr
 
@@ -37,7 +34,10 @@ ul.exhibition
             padding 10px 16px
 
         li:nth-of-type(4n-1), li:nth-of-type(4n)
-            background baseBgColor02
+            background rgba(baseBgColor02, .6)
 
         li:nth-of-type(2n)
             background baseBgColor01
+
+        li:nth-of-type(4n)
+            border-left 0
