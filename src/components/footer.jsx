@@ -6,6 +6,7 @@ import iconContact from "./imgs/contact.svg";
 import { texts } from "./data/nav-text";
 import Lang from "./common/language";
 import { getJpClass } from "./common/getJpClass";
+import { scrollTop } from "./common/scrollTop";
 
 class Footer extends Component {
   state = {};
@@ -24,18 +25,22 @@ class Footer extends Component {
           {/* Links */}
           <ul className={"navLink" + getJpClass(lang)}>
             <li>
-              <NavLink to="/" exact>
+              <NavLink to="/" onClick={scrollTop} exact>
                 {selectedTexts.top}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/history">{selectedTexts.history}</NavLink>
+              <NavLink onClick={scrollTop} to="/history">
+                {selectedTexts.history}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/shortmovie">{selectedTexts.shortmovie}</NavLink>
+              <NavLink onClick={scrollTop} to="/shortmovie">
+                {selectedTexts.shortmovie}
+              </NavLink>
             </li>
             {/* <li>
-              <NavLink to="/print">{selectedTexts.print}</NavLink>
+              <NavLink onClick={scrollTop} to="/print">{selectedTexts.print}</NavLink>
             </li> */}
           </ul>
 

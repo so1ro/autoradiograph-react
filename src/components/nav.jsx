@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Lang from "./common/language";
 import { getJpClass } from "../components/common/getJpClass";
+import { scrollTop } from "./common/scrollTop";
 import disableScroll from "disable-scroll";
 
 import { texts } from "./data/nav-text";
@@ -15,6 +16,7 @@ class Nav extends Component {
   onSpMenuHandle = off => {
     if (off) {
       disableScroll.off(); // re-enable scroll
+      scrollTop();
       return this.setState({ spMenuActive: false });
     }
     let spMenuActive = this.state.spMenuActive;
