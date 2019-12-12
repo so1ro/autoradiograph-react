@@ -4,7 +4,7 @@ import Lang from "./common/language";
 import { getJpClass } from "../components/common/getJpClass";
 import disableScroll from "disable-scroll";
 
-import { getTexts } from "./data/nav-text";
+import { texts } from "./data/nav-text";
 import "./css/nav.styl";
 
 class Nav extends Component {
@@ -34,7 +34,6 @@ class Nav extends Component {
 
   render() {
     const { lang, onChnageLnag } = this.props;
-    const texts = getTexts();
     const selectedTexts = { ...texts[lang] };
     const { getTitle, onSpMenuHandle, getSpMenuClasses } = this;
 
@@ -82,10 +81,18 @@ class Nav extends Component {
           {/* CV */}
           <ul className="navCV">
             <li>
-              <NavLink to="/">Patreon</NavLink>
+              <a
+                href={selectedTexts.patreon}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Patreon
+              </a>
             </li>
             <li>
-              <NavLink to="/">Log in</NavLink>
+              <NavLink className="disactive" to="/">
+                Log in
+              </NavLink>
             </li>
           </ul>
         </nav>

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./css/footer.styl";
 import iconFacebook from "./imgs/facebook.svg";
 import iconContact from "./imgs/contact.svg";
-import { getTexts } from "./data/footer-text";
+import { texts } from "./data/nav-text";
 import Lang from "./common/language";
 import { getJpClass } from "./common/getJpClass";
 
@@ -16,7 +16,6 @@ class Footer extends Component {
 
   render() {
     const { lang, onChnageLnag } = this.props;
-    const texts = getTexts();
     const selectedTexts = { ...texts[lang] };
 
     return (
@@ -35,17 +34,21 @@ class Footer extends Component {
             <li>
               <NavLink to="/shortmovie">{selectedTexts.shortmovie}</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/print">{selectedTexts.print}</NavLink>
-            </li>
+            </li> */}
           </ul>
 
           {/* Icons */}
           <ul className="iconLink">
             <li>
-              <NavLink to="/">
+              <a
+                href={selectedTexts.facebook}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <img src={iconFacebook} alt="Facebook" />
-              </NavLink>
+              </a>
             </li>
             <li>
               <NavLink to="/contact">
@@ -57,10 +60,18 @@ class Footer extends Component {
           {/* CV */}
           <ul className="navCV">
             <li>
-              <NavLink to="/">Patreon</NavLink>
+              <a
+                href={selectedTexts.patreon}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Patreon
+              </a>
             </li>
             <li>
-              <NavLink to="/">Log in</NavLink>
+              <NavLink className="disactive" to="/">
+                Log in
+              </NavLink>
             </li>
           </ul>
         </nav>
