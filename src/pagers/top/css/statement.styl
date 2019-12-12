@@ -9,10 +9,13 @@ section.statement
 
     p
         line-height 2
-        max-height 200px
+        max-height rfs(220px)
         overflow hidden
         transition transtionSpeed
         white-space pre-wrap
+
+        @media (--sp: )
+            max-height 120px
 
     .cover
         background rgb(32, 36, 42)
