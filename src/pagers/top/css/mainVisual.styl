@@ -1,0 +1,22 @@
+@import '../../../asset/css/*'
+
+section.mainVisual
+    align-items stretch
+    background #000
+    display flex
+    grid-template-columns 1fr
+    height 100vh
+    justify-content flex-end
+    width 100%
+
+    iframe
+        border 0 activeColor solid
+        width 66%
+
+    @media (--tablet: )
+        display block
+        height 100vw
+
+        iframe
+            position relative
+            width 100%
