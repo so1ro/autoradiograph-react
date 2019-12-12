@@ -50,6 +50,22 @@
         font-size responsive 12px 16px
         margin-bottom mb-adjust
 
+        .navCV
+            display none
+            margin 20px 0
+
+            @media (--sp: )
+                display block
+
+                li
+                    display inline-block
+
+                li ~ li
+                    margin-left 10px
+
+                li a
+                    width 100px
+
     .navLink.jp
         font-size responsive 12px 14px
         letter-spacing -.06ex
@@ -72,9 +88,6 @@
                 background #fff
                 cursor default
                 opacity .5
-
-        @media (--sp: )
-            z-index 2
 
     @media (--tablet: )
         grid-auto-flow dense

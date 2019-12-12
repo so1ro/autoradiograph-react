@@ -78,6 +78,23 @@ class Nav extends Component {
             <li className="lang">
               <Lang onChnageLnag={onChnageLnag} />
             </li>
+            {/* CV */}
+            <ul className="navCV">
+              <li>
+                <a
+                  href={selectedTexts.patreon}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Patreon
+                </a>
+              </li>
+              <li>
+                <NavLink className="disactive" style={{ color: "#000" }} to="/">
+                  Log in
+                </NavLink>
+              </li>
+            </ul>
           </ul>
 
           {/* CV */}
