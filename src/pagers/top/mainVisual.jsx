@@ -8,7 +8,7 @@ class MainVisual extends Component {
       <section className="mainVisual">
         <iframe
           title="mainvisual"
-          src="http://so1photo.xsrv.jp/web/3d/01_HornetNest/index.html"
+          src="http://so1photo.xsrv.jp/web/03_T-shirt/index.html"
         />
       </section>
     );

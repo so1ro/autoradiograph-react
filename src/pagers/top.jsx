@@ -7,7 +7,6 @@ import MainVisual from "./top/mainVisual";
 
 class Top extends Component {
   state = {};
-
   render() {
     const { lang } = this.props;
     return (
