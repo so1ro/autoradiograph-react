@@ -15,7 +15,7 @@ import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 
 class App extends Component {
   state = {
-    lang: ""
+    lang: "jp"
   };
 
   componentDidMount() {
@@ -25,15 +25,13 @@ class App extends Component {
     );
     // Get complete geolocation for the calling machine's IP address
     ipgeolocationApi.getGeolocation(this.handleResponse);
-
-    // const checkCountry = document.querySelector("#checkCountry");
-    // checkCountry.addEventListener("click", () => alert(this.state.lang));
   }
 
   // Function to handle response from IP Geolocation API
   handleResponse = json => {
     const geolocation = json.country_code2.toLowerCase();
-    const lang = geolocation === "jp" ? "jp" : "en"; //"en" : "jp"
+    if (geolocation === "jp") return;
+    const lang = "en"; //"en" : "jp"
     this.setState({ lang }); //": 'en'"
   };
 
