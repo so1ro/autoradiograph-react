@@ -1,23 +1,196 @@
 @import '../../../asset/css/*'
 
+textFieldPadding = rfs(12px)
+textFieldBackground = rgba(#000 .8)
+transitionProperty = all .6s
+
 section.mainVisual
     align-items stretch
     background #000
     display flex
     grid-template-columns 1fr
     height 60vh
-    justify-content flex-end
+    justify-content center
+    overflow hidden
+    position relative
     width 100%
 
     iframe
         border 0 activeColor solid
+        margin-right -650px
         top 0 !important
-        width 76%
+        width 100%
+
+    p.subtitle
+        background textFieldBackground
+        border-radius rfs(6px)
+        color rgba(#fff .75)
+        font-family 'Parisienne', cursive
+        font-size 2.4rem
+        font-weight 100
+        left 50%
+        margin-left -210px
+        opacity 1
+        padding textFieldPadding
+        position absolute
+        top 12vh
+        transform translateX(-50%)
+        transition transitionProperty
+        width 480px
+
+    ul.text
+        background textFieldBackground
+        border-radius rfs(6px)
+        bottom 5vh
+        left 50%
+        list-style-type none
+        margin-left -205px
+        padding textFieldPadding textFieldPadding 30px
+        position absolute
+        transform translateX(-50%)
+        transition transitionProperty
+        width 480px
+
+        li.title
+            font-size 1.6rem
+            line-height 1
+            margin-bottom 5px
+
+            img
+                display none
+
+        li.location
+            color rgba(#fff .6)
+            font-size .8rem
+            margin-bottom rfs(16px)
+
+        li.description
+            font-size .8rem
+            line-height 2
+            max-height 50px
+            overflow hidden
+            padding-right 10px
+            position relative
+            transition transitionProperty
+            white-space pre-line
+
+        li.cover
+            background rgb(0, 0, 0)
+            background linear-gradient(0, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%)
+            bottom 0
+            height 80px
+            left 0
+            position absolute
+            width 100%
+
+        img
+            bottom 10px
+            cursor pointer
+            left 50%
+            opacity 1
+            position absolute
+            transform rotate(360deg)
+            transform-origin center
+            transition transitionProperty
+            width rfs(1.6rem)
+
+    p.count
+        bottom rfs(8px)
+        font-size 1.6rem
+        position absolute
+        right common-pd
+
+        .popUp
+            background textFieldBackground
+            bottom 0
+            display block
+            font-size .8rem
+            left -330px
+            opacity 0
+            padding rfs(5px)
+            position absolute
+            text-align right
+            transform translateY(10%)
+            transition transitionProperty
+            width 320px
+            z-index -1
+
+        .popUp.active
+            opacity 1
+            transform translateY(0)
+            z-index 0
 
     @media (--tablet: )
         display block
         height 100vw
 
         iframe
+            filter blur(0)
             position relative
+            transition transitionProperty
             width 100% !important
+
+        iframe.open
+            filter blur(.6rem)
+
+        p.subtitle
+            display none
+
+        ul.text
+            bottom rfs(8px)
+            left 0
+            margin-left 6px
+            padding textFieldPadding textFieldPadding 0
+            transform translateX(0)
+            width 100vw
+
+            li.title
+                font-size 1.2rem
+
+                img
+                    bottom 1px
+                    display inline-block
+                    left 0
+                    margin-left rfs(20px)
+                    position relative
+
+            li.location
+                display none
+
+            li.description
+                max-height 0
+                // transition transitionProperty
+
+            li.cover
+                display none
+
+            img.arrowPC
+                display none
+
+        ul.text.open
+            li.location
+                display block
+
+            li.description
+                display block
+
+            li.cover
+                display block
+
+    p.subtitle.open
+        opacity 0
+
+    ul.text.open
+        li.description
+            max-height calc(50vh - 100px)
+            overflow scroll
+            overflow-x hidden
+            padding-bottom 10px
+            -webkit-overflow-scrolling touch
+
+            @media (--tablet: )
+                max-height calc(80vw - 20px)
+                padding-bottom 50px
+
+        img
+            transform rotate(180deg)

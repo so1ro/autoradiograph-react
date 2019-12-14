@@ -16,7 +16,7 @@ const comments = [
     name: { en: "Masamichi Kagaya", jp: "加賀谷 雅道" },
     jobTitle: {
       en: "Photographer / Programmer",
-      jp: "映像作家／プログラマー"
+      jp: "映像作家"
     },
     avatarName: "kagaya",
     en:
