@@ -16,7 +16,6 @@ class MainVisual extends Component {
   };
 
   handleArrow = () => {
-    console.log("working!!!!!!!!");
     let descriptionOpen = this.state.descriptionOpen;
     this.setState({ descriptionOpen: !descriptionOpen });
   };
