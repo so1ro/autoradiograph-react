@@ -15,6 +15,7 @@ section.mainVisual
     width 100%
 
     iframe
+        // background #000
         border 0 activeColor solid
         margin-right -650px
         top 0 !important
@@ -61,22 +62,25 @@ section.mainVisual
         li.location
             color rgba(#fff .6)
             font-size .8rem
+            // line-height 1.4
             margin-bottom rfs(16px)
+            white-space pre-wrap
 
         li.description
             font-size .8rem
             line-height 2
+            margin-bottom 10px
             max-height 50px
             overflow hidden
             padding-right 10px
             position relative
             transition transitionProperty
-            white-space pre-line
+            white-space pre-wrap
 
         li.cover
             background rgb(0, 0, 0)
             background linear-gradient(0, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%)
-            bottom 0
+            bottom 10px
             height 80px
             left 0
             position absolute
@@ -157,6 +161,7 @@ section.mainVisual
                 display none
 
             li.description
+                margin-bottom 0
                 max-height 0
                 // transition transitionProperty
 
@@ -181,15 +186,23 @@ section.mainVisual
 
     ul.text.open
         li.description
+            margin-bottom 0
             max-height calc(50vh - 100px)
-            overflow scroll
-            overflow-x hidden
+            overflow-y scroll
             padding-bottom 10px
+            scrollbar-width none /* Firefox 対応 */
+            -ms-overflow-style none /* IE, Edge 対応 */
             -webkit-overflow-scrolling touch
+
+            &::-webkit-scrollbar /* Chrome, Safari 対応 */
+                display none
 
             @media (--tablet: )
                 max-height calc(80vw - 20px)
                 padding-bottom 50px
+
+        li.cover
+            bottom 0
 
         img
             transform rotate(180deg)
