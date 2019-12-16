@@ -1,7 +1,7 @@
 export const mainVisual = [
   {
     id: 0,
-    dataUrl: "http://so1photo.xsrv.jp/web/01_HornetNest/index.html",
+    dataUrl: "https://so1photo.xsrv.jp/web/01_HornetNest/index.html",
     title: { en: "Hornet nest", jp: "スズメバチの巣" },
     location: {
       en: "Namie Town (Dec. 2018) / 1200 cpm",
@@ -16,7 +16,7 @@ export const mainVisual = [
   },
   {
     id: 1,
-    dataUrl: "http://so1photo.xsrv.jp/web/02_Helmet/index.html",
+    dataUrl: "https://so1photo.xsrv.jp/web/02_Helmet/index.html",
     title: { en: "School helmet", jp: "通学用ヘルメット" },
     location: {
       en:
@@ -32,7 +32,7 @@ export const mainVisual = [
   },
   {
     id: 2,
-    dataUrl: "http://so1photo.xsrv.jp/web/03_T-shirt/index.html",
+    dataUrl: "https://so1photo.xsrv.jp/web/03_T-shirt/index.html",
     title: { en: "T-shirt", jp: "Tシャツ" },
     location: {
       en: "Futaba town（Dec. 2018） / 240 ~ 10600 cpm",
@@ -47,7 +47,7 @@ export const mainVisual = [
   },
   {
     id: 3,
-    dataUrl: "http://so1photo.xsrv.jp/web/04_Cypress/index.html",
+    dataUrl: "https://so1photo.xsrv.jp/web/04_Cypress/index.html",
     title: { en: "Cypress leaves and cones", jp: "ヒノキの葉と実" },
     location: {
       en: "Iitate Village (2014)",
