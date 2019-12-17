@@ -39,7 +39,7 @@ section.mainVisual
         width 480px
 
     ul.text
-        background textFieldBackground
+        background rgba(textFieldBackground, 0)
         border-radius rfs(6px)
         bottom 5vh
         left 50%
@@ -145,7 +145,7 @@ section.mainVisual
             margin-left 6px
             padding textFieldPadding textFieldPadding 0
             transform translateX(0)
-            width 100vw
+            width calc(100vw - 12px)
 
             li.title
                 font-size 1.2rem
@@ -185,6 +185,8 @@ section.mainVisual
         opacity 0
 
     ul.text.open
+        background rgba(textFieldBackground, 1)
+
         li.description
             margin-bottom 0
             max-height calc(50vh - 100px)
