@@ -33,7 +33,7 @@ class MainVisual extends Component {
     const { lang } = this.props;
     const { descriptionOpen, popUp } = this.state;
     return (
-      <section className="mainVisual" onMouseEnter={disableScroll.on()}  onMouseLeave={disableScroll.off()}>
+      <section className="mainVisual" onMouseEnter={disableScroll.on()} onMouseLeave={disableScroll.off()}>
         <iframe
           className={descriptionOpen ? "open" : ""}
           title="mainvisual"
