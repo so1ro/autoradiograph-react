@@ -5,6 +5,8 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      sender: "Autoradiograph Contact Form",
+      // from: "Autoradiograph Contact Form",
       name: "",
       email: "",
       message: ""
@@ -15,7 +17,7 @@ class Contact extends React.Component {
     e.preventDefault();
     axios({
       method: "POST",
-      url: "http://localhost:5000/send",
+      url: process.env.REACT_APP_BACKEND_URL + "/send",
       data: this.state
     }).then(response => {
       if (response.data.status === "success") {
