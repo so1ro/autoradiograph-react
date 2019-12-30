@@ -52,18 +52,16 @@ class App extends Component {
             <Route
               path="/shortmovie"
               component={props => (
-                <ShortMovie addProps={"addedProps"} {...props} />
+                <ShortMovie lang={this.state.lang} {...props} />
               )}
             />
             <Route
               path="/print"
-              component={props => <Print addProps={"addedProps"} {...props} />}
+              component={props => <Print lang={this.state.lang} {...props} />}
             />
             <Route
               path="/contact"
-              component={props => (
-                <Contact addProps={"addedProps"} {...props} />
-              )}
+              component={props => <Contact lang={this.state.lang} {...props} />}
             />
             <Route path="/not-found" component={NotFound} />
             <Route

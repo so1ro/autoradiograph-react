@@ -9,23 +9,34 @@
 
     label
         display block
-        margin-bottom rfs(5px)
+        margin-bottom rfs(2px)
         margin-top rfs(20px)
 
-    input, textarea
+    input, textarea, .error
         // border 1px solid #fff
         background baseBgColor01
         border-radius rfs(3px)
         display block
+        line-height 1.6
         // margin-bottom rfs(20px)
-        padding rfs(5px) rfs(10px)
+        padding rfs(10px) rfs(16px)
         width 100%
 
-    // textarea
+    textarea
+        resize none
+
+    .error
+        background rgba(activeColor, .8)
+        color #000
+        padding rfs(2px) rfs(10px)
+
     button
-        background rgba(activeColor, .6)
+        background rgba(activeColor, 1)
         // border 1px solid activeColor
         border-radius rfs(3px)
         color #000
         margin-top rfs(30px)
         padding rfs(5px) rfs(20px)
+
+        &[disabled]
+            background rgba(activeColor, .6)
