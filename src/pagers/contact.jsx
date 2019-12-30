@@ -1,23 +1,26 @@
 import "./css/contact.styl";
 
-import React from "react";
+import React, { Component } from "react";
 import axios from "axios";
 
-class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sender: "Autoradiograph Contact Form",
-      // from: "Autoradiograph Contact Form",
-      name: "",
-      email: "",
-      title: "",
-      message: ""
-    };
-  }
+class Contact extends Component {
+  state = {
+    sender: "Autoradiograph Contact Form",
+    // from: "Autoradiograph Contact Form",
+    name: "",
+    email: "",
+    title: "",
+    message: "",
+    errors: {}
+  };
 
   handleSubmit(e) {
     e.preventDefault();
+
+    const errors = this.validate();
+    this.setState({ errors: errors || {} });
+    if (errors) return;
+
     axios({
       method: "POST",
       url: "/contact/send",
@@ -32,11 +35,23 @@ class Contact extends React.Component {
     });
   }
 
+  validate = () => {
+    const errors = {};
+
+    const contents = this.state;
+    if (contents.name.trim() === "") errors.name = "Name is required.";
+    if (contents.email.trim() === "") errors.email = "Email is required.";
+    if (contents.title.trim() === "") errors.title = "Title is required.";
+    if (contents.message.trim() === "") errors.message = "Message is required.";
+    return Object.keys(errors).length === 0 ? null : errors;
+  };
+
   resetForm() {
     this.setState({ name: "", email: "", title: "", message: "" });
   }
 
   render() {
+    const { errors } = this.state;
     return (
       <section className="contact component">
         <h2>Contact</h2>
@@ -55,6 +70,7 @@ class Contact extends React.Component {
               value={this.state.name}
               onChange={this.onNameChange.bind(this)}
             />
+            {errors.name && <div className="error">{errors.name}</div>}
           </div>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email address</label>
@@ -66,6 +82,7 @@ class Contact extends React.Component {
               value={this.state.email}
               onChange={this.onEmailChange.bind(this)}
             />
+            {errors.email && <div className="error">{errors.email}</div>}
           </div>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Title</label>
@@ -77,6 +94,7 @@ class Contact extends React.Component {
               value={this.state.title}
               onChange={this.onTitleChange.bind(this)}
             />
+            {errors.title && <div className="error">{errors.title}</div>}
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
@@ -87,6 +105,7 @@ class Contact extends React.Component {
               value={this.state.message}
               onChange={this.onMessageChange.bind(this)}
             />
+            {errors.message && <div className="error">{errors.message}</div>}
           </div>
           <button type="submit" className="btn btn-primary">
             Submit
