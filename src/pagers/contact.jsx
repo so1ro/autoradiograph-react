@@ -1,3 +1,5 @@
+import "./css/contact.styl";
+
 import React from "react";
 import axios from "axios";
 
@@ -9,6 +11,7 @@ class Contact extends React.Component {
       // from: "Autoradiograph Contact Form",
       name: "",
       email: "",
+      title: "",
       message: ""
     };
   }
@@ -30,12 +33,13 @@ class Contact extends React.Component {
   }
 
   resetForm() {
-    this.setState({ name: "", email: "", message: "" });
+    this.setState({ name: "", email: "", title: "", message: "" });
   }
 
   render() {
     return (
-      <div className="App">
+      <section className="contact component">
+        <h2>Contact</h2>
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
@@ -44,6 +48,7 @@ class Contact extends React.Component {
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
+              autoFocus
               type="text"
               className="form-control"
               id="name"
@@ -63,6 +68,17 @@ class Contact extends React.Component {
             />
           </div>
           <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Title</label>
+            <input
+              type="title"
+              className="form-control"
+              id="title"
+              aria-describedby="titleHelp"
+              value={this.state.title}
+              onChange={this.onTitleChange.bind(this)}
+            />
+          </div>
+          <div className="form-group">
             <label htmlFor="message">Message</label>
             <textarea
               className="form-control"
@@ -76,7 +92,7 @@ class Contact extends React.Component {
             Submit
           </button>
         </form>
-      </div>
+      </section>
     );
   }
 
@@ -86,6 +102,10 @@ class Contact extends React.Component {
 
   onEmailChange(event) {
     this.setState({ email: event.target.value });
+  }
+
+  onTitleChange(event) {
+    this.setState({ title: event.target.value });
   }
 
   onMessageChange(event) {
