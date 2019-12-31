@@ -160,7 +160,9 @@ class Contact extends Component {
             )}
           </div>
           {isSent && (
-            <div className="isSent">{afterSentMessage.success[lang]}</div>
+            <div className="isSent">
+              &#10003; {afterSentMessage.success[lang]}
+            </div>
           )}
           {failSending && (
             <div className="failSending">{afterSentMessage.fail[lang]}</div>
