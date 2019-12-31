@@ -11,6 +11,7 @@ import Footer from "./components/footer";
 import Print from "./pagers/print";
 import Contact from "./pagers/contact";
 import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
+import "./components/common/userAgent";
 // import { thisExpression } from "@babel/types";
 
 class App extends Component {
@@ -19,12 +20,15 @@ class App extends Component {
   };
 
   componentDidMount() {
+    // geolocation check
     const ipgeolocationApi = new IPGeolocationAPI(
       "db9994189ecf42fbb9ded60137264847",
       false
     );
     // Get complete geolocation for the calling machine's IP address
     ipgeolocationApi.getGeolocation(this.handleResponse);
+
+    // IE check
   }
 
   // Function to handle response from IP Geolocation API
