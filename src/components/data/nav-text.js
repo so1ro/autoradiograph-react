@@ -1,4 +1,5 @@
 import titleJP from "../imgs/title-jp.svg";
+// import titleJP2 from "../imgs/title-jp2.svg";
 
 export const texts = {
   en: {

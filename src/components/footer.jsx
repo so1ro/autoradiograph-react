@@ -56,7 +56,7 @@ class Footer extends Component {
               </a>
             </li>
             <li>
-              <NavLink to="/contact">
+              <NavLink onClick={scrollTop} to="/contact">
                 <img src={iconContact} alt="Contact" />
               </NavLink>
             </li>

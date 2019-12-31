@@ -6,7 +6,7 @@ export const inputParts = [
     type: "text",
     id: "name",
     value: "this.state.name",
-    autoFocus: true,
+    autoFocus: false,
     row: ""
   },
   {
