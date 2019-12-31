@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./css/mobileApp.styl";
 import bnrAppStore from "./imgs/bnr-app-store.svg";
 import bnrGooglePlay from "./imgs/bnr-google-play.svg";
+import imgApp from "./imgs/img-app.svg";
 import { videos, sentences } from "./data/mobileApp";
 import { getActive } from "../../components/common/getActiveClass";
 import { getJpClass } from "../../components/common/getJpClass";
@@ -24,7 +25,10 @@ class MobileApp extends Component {
       <section className="mobileApp">
         <div className="wrap">
           <div className="text">
-            <h1>{sentences.title[lang]}</h1>
+            <h1>
+              <img className="imgApp" src={imgApp} alt="App icon" />
+              <span>{sentences.title[lang]}</span>
+            </h1>
             <p className={getJpClass(lang)}>{sentences.explain[lang]}</p>
           </div>
           <div ref={this.movie} className="movie">
