@@ -40,3 +40,17 @@ export const inputParts = [
     row: 14
   }
 ];
+
+export const afterSentMessage = {
+  success: {
+    en: "Thank you so much for your message! You'll see my feedback soon.",
+    jp:
+      "お問い合わせいただきありがとうございます。後ほどお返事いたしますので、しばらくお待ち下さい。"
+  },
+  fail: {
+    en:
+      "Oops.. Sorry, your message wasn't sent. Could you please send it via Facebook Messenger?",
+    jp:
+      "申し訳ありません！\nメールが送信されませんでした。お手数ですが、Facebookからご連絡いただけますでしょうか？"
+  }
+};

@@ -30,13 +30,170 @@
         color #000
         padding rfs(2px) rfs(10px)
 
-    button
-        background rgba(activeColor, 1)
-        // border 1px solid activeColor
-        border-radius rfs(3px)
-        color #000
-        margin-top rfs(30px)
-        padding rfs(5px) rfs(20px)
+    .isSent, .failSending
+        animation generalFadeIn 1s
+        color #5EC84E
+        margin-top rfs(20px)
+        white-space pre-wrap
 
-        &[disabled]
-            background rgba(activeColor, .6)
+    .failSending
+        color #C7243A
+
+    .buttonWrap
+        align-items center
+        display flex
+        margin-top rfs(30px)
+
+        button
+            background rgba(activeColor, 1)
+            // border 1px solid activeColor
+            border-radius rfs(3px)
+            color #000
+            padding rfs(5px) rfs(20px)
+
+            &[disabled]
+                background rgba(activeColor, .6)
+
+        .la-ball-scale-multiple
+            margin-left rfs(16px)
+
+    /*
+     * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+     * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+     * Licensed under MIT
+     */
+    .la-ball-scale-multiple, .la-ball-scale-multiple > div
+        box-sizing border-box
+        position relative
+        -moz-box-sizing border-box
+        -webkit-box-sizing border-box
+
+    .la-ball-scale-multiple
+        color #fff
+        display block
+        font-size 0
+
+    .la-ball-scale-multiple.la-dark
+        color #333
+
+    .la-ball-scale-multiple > div
+        background-color currentColor
+        border 0 solid currentColor
+        display inline-block
+        float none
+
+    .la-ball-scale-multiple
+        height 32px
+        width 32px
+
+    .la-ball-scale-multiple > div
+        animation ball-scale-multiple 1s 0s linear infinite
+        border-radius 100%
+        height 32px
+        left 0
+        opacity 0
+        position absolute
+        top 0
+        width 32px
+        -moz-animation ball-scale-multiple 1s 0s linear infinite
+        -o-animation ball-scale-multiple 1s 0s linear infinite
+        -webkit-animation ball-scale-multiple 1s 0s linear infinite
+
+    .la-ball-scale-multiple > div:nth-child(2)
+        animation-delay .2s
+        -moz-animation-delay .2s
+        -o-animation-delay .2s
+        -webkit-animation-delay .2s
+
+    .la-ball-scale-multiple > div:nth-child(3)
+        animation-delay .4s
+        -moz-animation-delay .4s
+        -o-animation-delay .4s
+        -webkit-animation-delay .4s
+
+    .la-ball-scale-multiple.la-sm
+        height 16px
+        width 16px
+
+    .la-ball-scale-multiple.la-sm > div
+        height 16px
+        width 16px
+
+    .la-ball-scale-multiple.la-2x
+        height 64px
+        width 64px
+
+    .la-ball-scale-multiple.la-2x > div
+        height 64px
+        width 64px
+
+    .la-ball-scale-multiple.la-3x
+        height 96px
+        width 96px
+
+    .la-ball-scale-multiple.la-3x > div
+        height 96px
+        width 96px
+
+    /*
+     * Animation
+     */
+    @keyframes ball-scale-multiple
+        0%
+            opacity 0
+            transform scale(0)
+            -webkit-transform scale(0)
+
+        5%
+            opacity .75
+
+        100%
+            opacity 0
+            transform scale(1)
+            -webkit-transform scale(1)
+
+    @keyframes ball-scale-multiple
+        0%
+            opacity 0
+            transform scale(0)
+            -moz-transform scale(0)
+
+        5%
+            opacity .75
+
+        100%
+            opacity 0
+            transform scale(1)
+            -moz-transform scale(1)
+
+    @keyframes ball-scale-multiple
+        0%
+            opacity 0
+            transform scale(0)
+            -o-transform scale(0)
+
+        5%
+            opacity .75
+
+        100%
+            opacity 0
+            transform scale(1)
+            -o-transform scale(1)
+
+    @keyframes ball-scale-multiple
+        0%
+            opacity 0
+            transform scale(0)
+            -moz-transform scale(0)
+            -o-transform scale(0)
+            -webkit-transform scale(0)
+
+        5%
+            opacity .75
+
+        100%
+            opacity 0
+            transform scale(1)
+            -moz-transform scale(1)
+            -o-transform scale(1)
+            -webkit-transform scale(1)

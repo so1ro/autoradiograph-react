@@ -2,7 +2,7 @@ import "./css/contact.styl";
 import React, { Component } from "react";
 import axios from "axios";
 import Joi from "joi-browser";
-import { inputParts } from "./data/contact";
+import { inputParts, afterSentMessage } from "./data/contact";
 
 class Contact extends Component {
   state = {
@@ -14,7 +14,28 @@ class Contact extends Component {
       title: "",
       message: ""
     },
-    errors: {}
+    errors: {},
+    isSending: false,
+    isSent: false,
+    failSending: false
+  };
+
+  handleChange = ({ currentTarget: input }) => {
+    //validation
+    const { errors } = this.state;
+    const errorMessage = this.validateProperties(input);
+    errors[input.id] = errorMessage;
+
+    //each inputs to state
+    const { inputs } = this.state;
+    inputs[input.id] = input.value;
+    this.setState({ inputs: inputs });
+
+    // Restore mail form state
+    let { isSent, failSending } = this.state;
+    isSent = false;
+    failSending = false;
+    this.setState({ isSent, failSending });
   };
 
   schema = {
@@ -44,16 +65,17 @@ class Contact extends Component {
     this.setState({ errors: errors || {} });
     if (errors) return;
 
+    this.setState({ isSending: true });
     axios({
       method: "POST",
-      url: "http://localhost:5000/contact/send", // /contact/send http://localhost:5000/contact/send
+      url: "/contact/send", // /contact/send, http://localhost:5000/contact/send
       data: this.state.inputs
     }).then(response => {
       if (response.data.status === "success") {
-        alert("Message Sent.");
+        this.setState({ isSending: false, isSent: true });
         this.resetForm();
       } else if (response.data.status === "fail") {
-        alert("Message failed to send.");
+        this.setState({ isSending: false, failSending: true });
       }
     });
   }
@@ -81,18 +103,8 @@ class Contact extends Component {
     return error ? error.details[0].message : null;
   };
 
-  handleChange = ({ currentTarget: input }) => {
-    const { errors } = this.state;
-    const errorMessage = this.validateProperties(input);
-    errors[input.id] = errorMessage;
-
-    const { inputs } = this.state;
-    inputs[input.id] = input.value;
-    this.setState({ inputs: inputs });
-  };
-
   render() {
-    const { errors } = this.state;
+    const { errors, isSending, isSent, failSending } = this.state;
     const { lang } = this.props;
     return (
       <section className="contact component">
@@ -130,13 +142,29 @@ class Contact extends Component {
             </div>
           ))}
 
-          <button
-            type="submit"
-            className="btn btn-primary"
-            disabled={this.validate()}
-          >
-            Submit
-          </button>
+          <div className="buttonWrap">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={this.validate()}
+            >
+              Submit
+            </button>
+            {/* Sending spinner */}
+            {isSending && (
+              <div class="la-ball-scale-multiple">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            )}
+          </div>
+          {isSent && (
+            <div className="isSent">{afterSentMessage.success[lang]}</div>
+          )}
+          {failSending && (
+            <div className="failSending">{afterSentMessage.fail[lang]}</div>
+          )}
         </form>
       </section>
     );

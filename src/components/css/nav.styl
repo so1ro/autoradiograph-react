@@ -113,7 +113,7 @@
             display none
 
             li
-                animation fadeIn 1s
+                animation generalFadeIn 1s
 
             &.active
                 align-content center
@@ -152,18 +152,6 @@
     @media (--sp: )
         display grid
         z-index 2
-
-/* =====================
-  sp時 navlink fadeIn
-===================== */
-@keyframes fadeIn
-    0%
-        opacity 0
-        transform translateY(10px)
-
-    100%
-        opacity 1
-        transform translateY(0)
 
 /* =====================
   .spMenu Hamburg animation
