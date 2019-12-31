@@ -46,7 +46,7 @@ class Contact extends Component {
 
     axios({
       method: "POST",
-      url: "/contact/send",
+      url: "http://localhost:5000/contact/send", // /contact/send http://localhost:5000/contact/send
       data: this.state.inputs
     }).then(response => {
       if (response.data.status === "success") {
@@ -56,6 +56,10 @@ class Contact extends Component {
         alert("Message failed to send.");
       }
     });
+  }
+
+  resetForm() {
+    this.setState({ inputs: { name: "", email: "", title: "", message: "" } });
   }
 
   validate = () => {
