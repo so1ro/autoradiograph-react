@@ -49,16 +49,16 @@ class App extends Component {
       <div className="App">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Autoradiograph / 放射線像</title>
+          <title>Autoradiograph/放射線像</title>
           <link rel="canonical" href="https://www.autoradiograph.org" />
-          <meta property="og:title" content="Autoradiograph / 放射線像" />
+          <meta property="og:title" content="Autoradiograph/放射線像" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Visualize radiation / 放射能を可視化するプロジェクト"
+            content="Visualize radiation/放射能を可視化するプロジェクト"
           />
           <meta property="og:url" content="www.autoradiograph.org" />
-          <meta property="og:site_name" content="Autoradiograph / 放射線像" />
+          <meta property="og:site_name" content="Autoradiograph/放射線像" />
           <meta property="og:image" content="サムネイル画像のURL" />
         </Helmet>
         <Nav lang={this.state.lang} onChnageLnag={this.changeLang} />
