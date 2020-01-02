@@ -20,7 +20,7 @@ const comments = [
     },
     avatarName: "kagaya",
     en:
-      "Kagaya says that Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.",
+      'In 2011 I was doing trial and errors to somehow take visual records of radioactive contamination. Radiation have been described with coined words like "black rain" or "nuclear fallout" to provoke readers\' imagination and with "Bq" or "Sv" in scientific reports and textbooks. I strongly believed that it was important and not impossible to leave behind visual records as well, and that was what someone in Japan had to do.',
     jp:
       "2011年、私はどうにかして放射能汚染を視覚的な記録として残せないものかと試行錯誤を繰り返していました。これまで「黒い雨」「死の灰」といった言葉や、「ベクレル」「シーベルト」といった数値で表現されていた放射能を視覚的な映像として記録に残すこと、それは日本にいる誰かが今やらなければならないことであり、それは不可能なことではないだろうと確信を抱いていたのです。"
   },
@@ -33,7 +33,7 @@ const comments = [
     },
     avatarName: "mori",
     en:
-      "Mori says that Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.",
+      "Preparing for the next possible nuclear disaster, people in the world should keep visual images to know how things would be contaminated in a nuclear accident. It is my great pleasure that these autoradiographs would serve as an educational material not only for Japanese but also for every day-care centers, kindergartens, elementary schools, hight schools and universities in the nations where nuclear power plants exist.",
     jp:
       "起こりうる次回の原発事故に備えるには、何がどれくらいどのように汚染をするのかをビジュアルな映像として世界の人々は頭の中に収蔵しておく必要がある。この放射線像を、日本ばかりでなく、世界の原発周辺の保育園、幼稚園、小学校、中学校、高等学校、果ては大学までも、教養教育の教材に使って頂ければ望外の喜びです。"
   }
