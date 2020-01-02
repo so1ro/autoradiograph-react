@@ -13,6 +13,7 @@ import Print from "./pagers/print";
 import Contact from "./pagers/contact";
 import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 import "./components/common/userAgent";
+import { metaData } from "./asset/data/meta";
 // import { thisExpression } from "@babel/types";
 
 class App extends Component {
@@ -49,18 +50,37 @@ class App extends Component {
       <div className="App">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Autoradiograph/放射線像</title>
+          <title>放射線像/Autoradiograph</title>
+          <meta
+            name="description"
+            content="放射能を可視化するプロジェクト / Project of visualizing radiation"
+          />
+          <meta
+            name="keywords"
+            content="Autoradiograph, 放射線像, Radiation, 放射能, Visualize, 可視化"
+          />
+          <meta
+            name="author"
+            content="Masamichi Kagaya, Satoshi Mori, 加賀谷 雅道, 森 敏"
+          />
           <link rel="canonical" href="https://www.autoradiograph.org" />
-          <meta property="og:title" content="Autoradiograph/放射線像" />
+          <meta property="og:title" content="放射線像/Autoradiograph" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Visualize radiation/放射能を可視化するプロジェクト"
+            content="放射能を可視化するプロジェクト/Visualize radiation"
           />
           <meta property="og:url" content="www.autoradiograph.org" />
-          <meta property="og:site_name" content="Autoradiograph/放射線像" />
-          <meta property="og:image" content="サムネイル画像のURL" />
+          <meta property="og:site_name" content="放射線像/Autoradiograph" />
+          <meta property="og:image" content="./asset/data/ogp.png" />
+          <meta name="theme-color" content="#000000"></meta>
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./apple-touch-icon.png"
+          ></link>
         </Helmet>
+
         <Nav lang={this.state.lang} onChnageLnag={this.changeLang} />
         <main>
           <Switch>
