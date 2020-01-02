@@ -11,7 +11,7 @@ import disableScroll from "disable-scroll";
 
 class MainVisual extends Component {
   state = {
-    selectedMV_Number: selectMainVisual(),
+    selectedMV_Number: selectMainVisual(), //selectMainVisual()
     descriptionOpen: false,
     popUp: false
   };
@@ -35,8 +35,8 @@ class MainVisual extends Component {
     return (
       <section
         className="mainVisual"
-        onMouseEnter={disableScroll.on()}
-        onMouseLeave={disableScroll.off()}
+        onMouseEnter={() => disableScroll.on()}
+        onMouseLeave={() => disableScroll.off()}
       >
         <iframe
           className={descriptionOpen ? "open" : ""}
