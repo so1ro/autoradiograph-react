@@ -2,7 +2,7 @@ import "./css/contact.styl";
 import React, { Component } from "react";
 import axios from "axios";
 import Joi from "joi-browser";
-import { inputParts, afterSentMessage } from "./data/contact";
+import { inputParts, buttonText, afterSentMessage } from "./data/contact";
 
 class Contact extends Component {
   state = {
@@ -148,7 +148,7 @@ class Contact extends Component {
               className="btn btn-primary"
               disabled={this.validate()}
             >
-              Submit
+              {buttonText[lang]}
             </button>
             {/* Sending spinner */}
             {isSending && (

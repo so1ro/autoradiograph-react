@@ -41,6 +41,11 @@ export const inputParts = [
   }
 ];
 
+export const buttonText = {
+  en: "Submit",
+  jp: "送信"
+};
+
 export const afterSentMessage = {
   success: {
     en: "Thank you so much for your message! You'll see my feedback soon.",

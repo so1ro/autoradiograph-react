@@ -13,8 +13,6 @@ import Print from "./pagers/print";
 import Contact from "./pagers/contact";
 import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 import "./components/common/userAgent";
-import { metaData } from "./asset/data/meta";
-// import { thisExpression } from "@babel/types";
 
 class App extends Component {
   state = {
@@ -29,8 +27,6 @@ class App extends Component {
     );
     // Get complete geolocation for the calling machine's IP address
     ipgeolocationApi.getGeolocation(this.handleResponse);
-
-    // IE check
   }
 
   // Function to handle response from IP Geolocation API

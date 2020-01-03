@@ -7,7 +7,7 @@ import {
   popUpText
 } from "./data/mainVisual";
 import downArrow from "./imgs/down-arrow.svg";
-import disableScroll from "disable-scroll";
+// import disableScroll from "disable-scroll";
 
 class MainVisual extends Component {
   state = {
@@ -33,15 +33,14 @@ class MainVisual extends Component {
     const { lang } = this.props;
     const { descriptionOpen, popUp } = this.state;
     return (
-      <section
-        className="mainVisual"
-        onMouseEnter={() => disableScroll.on()}
-        onMouseLeave={() => disableScroll.off()}
-      >
+      <section className="mainVisual">
         <iframe
           className={descriptionOpen ? "open" : ""}
           title="mainvisual"
           src={mainVisualData.dataUrl}
+          // onMouseEnter={() => disableScroll.on()}
+          // onMouseLeave={() => disableScroll.off()}
+          // onTouchStart={() => disableScroll.off()}
         />
         <p className={"subtitle" + (descriptionOpen ? " open" : "")}>
           {subtitle}
