@@ -6,6 +6,7 @@ import imgApp from "./imgs/img-app.svg";
 import { videos, sentences } from "./data/mobileApp";
 import { getActive } from "../../components/common/getActiveClass";
 import { getJpClass } from "../../components/common/getJpClass";
+import { Event } from "../../asset/analytics";
 
 class MobileApp extends Component {
   state = {
@@ -16,6 +17,27 @@ class MobileApp extends Component {
   handleVideoType(type) {
     this.setState({ videoType: type });
   }
+
+  ga_AppStoreAccess = type => {
+    const { lang } = this.props;
+    if (type === "ios") {
+      lang === "jp"
+        ? Event("iOS App JP", "Access Japanese Apple Store", "APPLE_STORE_JP")
+        : Event("iOS App EN", "Access English Apple Store", "APPLE_STORE_EN");
+    } else {
+      lang === "jp"
+        ? Event(
+            "Android JP App",
+            "Access Japanese Google Play Store",
+            "GOOGLE_PLAY_JP"
+          )
+        : Event(
+            "Android EN App",
+            "Access English Google Play Store",
+            "GOOGLE_PLAY_EN"
+          );
+    }
+  };
 
   render() {
     const { lang } = this.props;
@@ -79,6 +101,7 @@ class MobileApp extends Component {
               href={sentences.links.ios[lang]}
               target="_blank"
               rel="noreferrer noopener"
+              onClick={() => this.ga_AppStoreAccess("ios")}
             >
               <img src={bnrAppStore} alt="Apple Store" />
             </a>
@@ -86,6 +109,7 @@ class MobileApp extends Component {
               href={sentences.links.android[lang]}
               target="_blank"
               rel="noreferrer noopener"
+              onClick={() => this.ga_AppStoreAccess("android")}
             >
               <img src={bnrGooglePlay} alt="Google Play" />
             </a>

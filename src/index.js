@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+// import auth from './auth'; // Sample authentication provider
 
 // console.log("SUPERMAN", process.env.REACT_APP_NAME);
 

@@ -13,6 +13,7 @@ import Print from "./pagers/print";
 import Contact from "./pagers/contact";
 import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 import "./components/common/userAgent";
+import { PageView, initGA } from "./asset/analytics/index";
 
 class App extends Component {
   state = {
@@ -27,6 +28,9 @@ class App extends Component {
     );
     // Get complete geolocation for the calling machine's IP address
     ipgeolocationApi.getGeolocation(this.handleResponse);
+
+    initGA("UA-46628900-1");
+    PageView();
   }
 
   // Function to handle response from IP Geolocation API
