@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import Nav from "./components/nav";
 import Top from "./pagers/top";
 import History from "./pagers/history";
@@ -48,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Helmet>
+        {/* <Helmet>
           <meta charSet="utf-8" />
           <title>放射線像/Autoradiograph</title>
           <meta
@@ -82,7 +82,7 @@ class App extends Component {
             sizes="180x180"
             href="./apple-touch-icon.png"
           ></link>
-        </Helmet>
+        </Helmet> */}
 
         <Nav lang={this.state.lang} onChnageLnag={this.changeLang} />
         <main>
