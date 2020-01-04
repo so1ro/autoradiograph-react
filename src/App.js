@@ -72,10 +72,7 @@ class App extends Component {
           />
           <meta property="og:url" content="www.autoradiograph.org" />
           <meta property="og:site_name" content="放射線像/Autoradiograph" />
-          <meta
-            property="og:image"
-            content="https://www.autoradiograph.org/ogp.png"
-          />
+          <meta property="og:image" content="./ogp.png" />
           <meta name="theme-color" content="#000000"></meta>
           <link
             rel="apple-touch-icon"
