@@ -25,7 +25,7 @@ class MainVisual extends Component {
     this.setState({ popUp: true });
     setTimeout(() => {
       this.setState({ popUp: false });
-    }, 2000);
+    }, 3000);
   };
 
   render() {
