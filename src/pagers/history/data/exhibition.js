@@ -11,8 +11,8 @@ const exhibitionList = [
     _id: 28,
     date: { en: "Sep. 2019", jp: "2019 / 9" },
     place: {
-      en: "Italia / Getxophoto Festival",
-      jp: "イタリア / Getxophoto Festival"
+      en: "Spain / Getxophoto Festival",
+      jp: "スペイン / Getxophoto Festival"
     }
   },
   {
