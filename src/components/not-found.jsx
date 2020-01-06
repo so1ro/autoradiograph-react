@@ -1,7 +1,26 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const NotFound = () => {
-  return <h1>Not Found</h1>;
+  return (
+    <section className="history component">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Not found | 放射線像/Autoradiograph</title>
+        <link rel="canonical" href="https://www.autoradiograph.org/not-found" />
+        <meta
+          property="og:title"
+          content="Not found | 放射線像/Autoradiograph"
+        />
+        <meta property="og:url" content="www.autoradiograph.org/not-found" />
+        <meta
+          property="og:site_name"
+          content="Not found | 放射線像/Autoradiograph"
+        />
+      </Helmet>
+      <h1>Not Found</h1>
+    </section>
+  );
 };
 
 export default NotFound;

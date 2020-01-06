@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Joi from "joi-browser";
 import { inputParts, buttonText, afterSentMessage } from "./data/contact";
+import { Helmet } from "react-helmet";
 
 class Contact extends Component {
   state = {
@@ -108,6 +109,20 @@ class Contact extends Component {
     const { lang } = this.props;
     return (
       <section className="contact component">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Contact | 放射線像/Autoradiograph</title>
+          <link rel="canonical" href="https://www.autoradiograph.org/contact" />
+          <meta
+            property="og:title"
+            content="Contact | 放射線像/Autoradiograph"
+          />
+          <meta property="og:url" content="www.autoradiograph.org/contact" />
+          <meta
+            property="og:site_name"
+            content="Contact | 放射線像/Autoradiograph"
+          />
+        </Helmet>
         <h2>Contact</h2>
         <form
           id="contact-form"

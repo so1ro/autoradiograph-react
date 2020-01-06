@@ -7,6 +7,7 @@ import Exhibition from "./history/exhibition";
 import Award from "./history/award";
 import "./history/css/press.styl";
 import "./history/css/tabs.styl";
+import { Helmet } from "react-helmet";
 
 class History extends Component {
   state = { tabSelect: "press" };
@@ -21,6 +22,20 @@ class History extends Component {
 
     return (
       <section className="history component">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>History | 放射線像/Autoradiograph</title>
+          <link rel="canonical" href="https://www.autoradiograph.org/history" />
+          <meta
+            property="og:title"
+            content="History | 放射線像/Autoradiograph"
+          />
+          <meta property="og:url" content="www.autoradiograph.org/history" />
+          <meta
+            property="og:site_name"
+            content="History | 放射線像/Autoradiograph"
+          />
+        </Helmet>
         <Tab lang={lang} tabSelect={tabSelect} onHandleTab={this.handleTab} />
         <Press lang={lang} tabSelect={tabSelect} />
         <Exhibition lang={lang} tabSelect={tabSelect} />

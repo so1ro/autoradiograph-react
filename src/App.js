@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import Nav from "./components/nav";
 import Top from "./pagers/top";
 import History from "./pagers/history";
@@ -14,6 +13,7 @@ import Contact from "./pagers/contact";
 import IPGeolocationAPI from "ip-geolocation-api-javascript-sdk";
 import "./components/common/userAgent";
 import { PageView, initGA } from "./asset/analytics/index";
+import { Helmet } from "react-helmet";
 
 class App extends Component {
   state = {
