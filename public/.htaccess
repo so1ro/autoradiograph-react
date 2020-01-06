@@ -1,0 +1,14 @@
+<ifmodule mod_deflate.c>
+    <ifmodule mod_mime.c>
+        Addtype text/plain .gltf
+    </ifmodule>
+    AddOutputFilterByType DEFLATE text/plain
+    #
+    # リダイレクト設定
+    #
+    <IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    </IfModule>
+</ifmodule>
