@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { getExhibitionList } from "./data/exhibition";
 import "./css/exhibition.styl";
 import { getActive } from "../../components/common/getActiveClass";
-import { getJpClass } from "../../components/common/getJpClass";
 import PictureGrid from "../../components/common/pictureGrid";
 import { pressList as exhibitPictureList } from "./data/press";
+import Table from "../../components/common/table";
 
 class Exhibition extends Component {
   render() {
@@ -13,16 +13,7 @@ class Exhibition extends Component {
 
     return (
       <div className={"exhibition" + getActive(tabSelect, "exhibition")}>
-        <ul className="table">
-          {exhibitionList.map(exhibition => (
-            <React.Fragment key={exhibition._id}>
-              <li className="date">{exhibition.date[lang]}</li>
-              <li className={"place" + getJpClass(lang)}>
-                {exhibition.place[lang]}
-              </li>
-            </React.Fragment>
-          ))}
-        </ul>
+        <Table lang={lang} items={exhibitionList} />
         <PictureGrid lang={lang} items={exhibitPictureList} />
       </div>
     );
