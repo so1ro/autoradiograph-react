@@ -1,10 +1,11 @@
 import React from "react";
 import { Picture } from "react-responsive-picture";
 import { getJpClass } from "./common/getJpClass";
+import "./css/pictureGrid.styl";
 
 const PictureGrid = ({ lang, items }) => {
   return (
-    <ul>
+    <ul className="pictureGrid">
       {items.map(item => (
         <li key={item._id}>
           <div>

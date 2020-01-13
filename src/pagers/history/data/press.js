@@ -52,7 +52,7 @@ import img03_2x from "./imgs/03@2x.jpg";
 import img02_2x from "./imgs/02@2x.jpg";
 import img01_2x from "./imgs/01@2x.jpg";
 
-const pressList = [
+export const pressList = [
   {
     _id: 26,
     imgUrl: `${img25_2x} 2x, ${img25} 1x`,
@@ -210,7 +210,3 @@ const pressList = [
     date: "Mar. 2014"
   }
 ];
-
-export function getPressList() {
-  return pressList;
-}

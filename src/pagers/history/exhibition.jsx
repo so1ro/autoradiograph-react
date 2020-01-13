@@ -3,6 +3,7 @@ import { getExhibitionList } from "./data/exhibition";
 import "./css/exhibition.styl";
 import { getActive } from "../../components/common/getActiveClass";
 import { getJpClass } from "../../components/common/getJpClass";
+// import PictureGrid from "../../components/pictureGrid";
 
 class Exhibition extends Component {
   render() {
@@ -10,16 +11,19 @@ class Exhibition extends Component {
     const { lang, tabSelect } = this.props;
 
     return (
-      <ul className={"exhibition" + getActive(tabSelect, "exhibition")}>
-        {exhibitionList.map(exhibition => (
-          <React.Fragment key={exhibition._id}>
-            <li className="date">{exhibition.date[lang]}</li>
-            <li className={"place" + getJpClass(lang)}>
-              {exhibition.place[lang]}
-            </li>
-          </React.Fragment>
-        ))}
-      </ul>
+      <div className={"exhibition" + getActive(tabSelect, "exhibition")}>
+        <ul>
+          {exhibitionList.map(exhibition => (
+            <React.Fragment key={exhibition._id}>
+              <li className="date">{exhibition.date[lang]}</li>
+              <li className={"place" + getJpClass(lang)}>
+                {exhibition.place[lang]}
+              </li>
+            </React.Fragment>
+          ))}
+        </ul>
+        {/* <PictureGrid lang={lang} items={exhibitPictureList} /> */}
+      </div>
     );
   }
 }
