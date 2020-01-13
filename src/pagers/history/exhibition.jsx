@@ -3,7 +3,7 @@ import { getExhibitionList } from "./data/exhibition";
 import "./css/exhibition.styl";
 import { getActive } from "../../components/common/getActiveClass";
 import { getJpClass } from "../../components/common/getJpClass";
-import PictureGrid from "../../components/pictureGrid";
+import PictureGrid from "../../components/common/pictureGrid";
 import { pressList as exhibitPictureList } from "./data/press";
 
 class Exhibition extends Component {

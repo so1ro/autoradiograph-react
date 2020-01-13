@@ -1,5 +1,5 @@
 import React from "react";
-import PictureGrid from "../../components/pictureGrid";
+import PictureGrid from "../../components/common/pictureGrid";
 import { pressList } from "./data/press";
 import { getActive } from "../../components/common/getActiveClass";
 

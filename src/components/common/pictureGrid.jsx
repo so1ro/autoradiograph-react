@@ -1,6 +1,6 @@
 import React from "react";
 import { Picture } from "react-responsive-picture";
-import { getJpClass } from "./common/getJpClass";
+import { getJpClass } from "./getJpClass";
 import "./css/pictureGrid.styl";
 
 const PictureGrid = ({ lang, items }) => {
