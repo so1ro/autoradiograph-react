@@ -20,7 +20,7 @@ const comments = [
     },
     avatarName: "kagaya",
     en:
-      'In 2011, by trial and error, I began to try and somehow capture visual records of radioactive contamination.  Radiation is discussed in terms of "Bq" or "Sv" in scientific reports and textbooks and has been described with coined expressions like "black rain" or "nuclear fallout" to provoke readers\' imagination. I strongly believed that it was important and not impossible to leave behind visual records as well, and this was what someone in Japan had to do. ',
+      "In 2011, by trial and error, I began to try and somehow capture visual records of radioactive contamination.  Radiation is discussed in terms of “Bq” or “Sv” in scientific reports and textbooks and has been described with coined expressions like “black rain” or “nuclear fallout” to provoke readers' imagination. I strongly believed that it was important and not impossible to leave behind visual records as well, and this was what someone in Japan had to do. ",
     jp:
       "2011年、私はどうにかして放射能汚染を視覚的な記録として残せないものかと試行錯誤を繰り返していました。これまで「黒い雨」「死の灰」といった言葉や、「ベクレル」「シーベルト」といった数値で表現されていた放射能を視覚的な映像として記録に残すこと、それは日本にいる誰かが今やらなければならないことであり、それは不可能なことではないだろうと確信を抱いていたのです。"
   },
