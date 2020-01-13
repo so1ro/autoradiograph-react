@@ -1,6 +1,22 @@
-const exhibitionList = [
+import img07 from "./imgs/exhibition/07.jpg";
+import img06 from "./imgs/exhibition/06.jpg";
+import img05 from "./imgs/exhibition/05.jpg";
+import img04 from "./imgs/exhibition/04.jpg";
+import img03 from "./imgs/exhibition/03.jpg";
+import img02 from "./imgs/exhibition/02.jpg";
+import img01 from "./imgs/exhibition/01.jpg";
+
+import img07_2x from "./imgs/exhibition/07@2x.jpg";
+import img06_2x from "./imgs/exhibition/06@2x.jpg";
+import img05_2x from "./imgs/exhibition/05@2x.jpg";
+import img04_2x from "./imgs/exhibition/04@2x.jpg";
+import img03_2x from "./imgs/exhibition/03@2x.jpg";
+import img02_2x from "./imgs/exhibition/02@2x.jpg";
+import img01_2x from "./imgs/exhibition/01@2x.jpg";
+
+export const exhibitionList = [
   {
-    _id: 29,
+    _id: 30,
     filed: { en: "Sep. 2019", jp: "2019 / 9" },
     content: {
       en: "Korea Seoul ／ MMCA - Gathering",
@@ -8,7 +24,7 @@ const exhibitionList = [
     }
   },
   {
-    _id: 28,
+    _id: 29,
     filed: { en: "Sep. 2019", jp: "2019 / 9" },
     content: {
       en: "Spain ／ Getxophoto Festival",
@@ -16,7 +32,7 @@ const exhibitionList = [
     }
   },
   {
-    _id: 27,
+    _id: 28,
     filed: { en: "Sep. 2018", jp: "2018 / 9" },
     content: {
       en: "Netherlands ／ BredaPhoto Festival",
@@ -24,7 +40,7 @@ const exhibitionList = [
     }
   },
   {
-    _id: 26,
+    _id: 27,
     filed: { en: "Apr. 2018", jp: "2018 / 4" },
     content: {
       en: "Ukraine Zhytomyr Polytechnic State University",
@@ -32,7 +48,7 @@ const exhibitionList = [
     }
   },
   {
-    _id: 25,
+    _id: 26,
     filed: { en: "Apr. 2018", jp: "2018 / 4" },
     content: {
       en: "Hiroshima city",
@@ -40,11 +56,19 @@ const exhibitionList = [
     }
   },
   {
-    _id: 24,
+    _id: 25,
     filed: { en: "Dec. 2017", jp: "2017 / 12" },
     content: {
       en: "China ／ Lianzhou Foto Festival",
       jp: "中国 ／ 連州国際写真祭"
+    }
+  },
+  {
+    _id: 24,
+    filed: { en: "Nov. 2017", jp: "2017 / 11" },
+    content: {
+      en: "Paris ／ Galerie Spéos",
+      jp: "パリ ／ Galerie Spéos"
     }
   },
   {
@@ -212,6 +236,56 @@ const exhibitionList = [
   }
 ];
 
-export function getExhibitionList() {
-  return exhibitionList;
-}
+export const exhibitPhotos = [
+  {
+    _id: 1,
+    imgUrl: `${img01_2x} 2x, ${img01} 1x`,
+    title: {
+      en: "Spain／Getxophoto",
+      jp: "スペイン／Getxophoto"
+    },
+    date: "Sep. 2019"
+  },
+  {
+    _id: 2,
+    imgUrl: `${img02_2x} 2x, ${img02} 1x`,
+    title: {
+      en: "Spain／Getxophoto",
+      jp: "スペイン／Getxophoto"
+    },
+    date: "Sep. 2019"
+  },
+  {
+    _id: 3,
+    imgUrl: `${img03_2x} 2x, ${img03} 1x`,
+    title: {
+      en: "Spain／Getxophoto",
+      jp: "スペイン／Getxophoto"
+    },
+    date: "Sep. 2019"
+  },
+  {
+    _id: 4,
+    imgUrl: `${img04_2x} 2x, ${img04} 1x`,
+    title: { en: "Paris／Galerie Spéos", jp: "パリ／Galerie Spéos" },
+    date: "Nov. 2017"
+  },
+  {
+    _id: 5,
+    imgUrl: `${img05_2x} 2x, ${img05} 1x`,
+    title: { en: "Paris／Galerie Spéos", jp: "パリ／Galerie Spéos" },
+    date: "Nov. 2017"
+  },
+  {
+    _id: 6,
+    imgUrl: `${img06_2x} 2x, ${img06} 1x`,
+    title: { en: "Paris／Galerie Spéos", jp: "パリ／Galerie Spéos" },
+    date: "Nov. 2017"
+  },
+  {
+    _id: 7,
+    imgUrl: `${img07_2x} 2x, ${img07} 1x`,
+    title: { en: "Paris／Galerie Spéos", jp: "パリ／Galerie Spéos" },
+    date: "Nov. 2017"
+  }
+];
