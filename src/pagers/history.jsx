@@ -24,16 +24,16 @@ class History extends Component {
       <section className="history component">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>History | 放射線像/Autoradiograph</title>
+          <title>History | 放射線像／Autoradiograph</title>
           <link rel="canonical" href="https://www.autoradiograph.org/history" />
           <meta
             property="og:title"
-            content="History | 放射線像/Autoradiograph"
+            content="History | 放射線像／Autoradiograph"
           />
           <meta property="og:url" content="www.autoradiograph.org/history" />
           <meta
             property="og:site_name"
-            content="History | 放射線像/Autoradiograph"
+            content="History | 放射線像／Autoradiograph"
           />
         </Helmet>
         <Tab lang={lang} tabSelect={tabSelect} onHandleTab={this.handleTab} />

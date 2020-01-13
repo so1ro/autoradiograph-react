@@ -111,16 +111,16 @@ class Contact extends Component {
       <section className="contact component">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Contact | 放射線像/Autoradiograph</title>
+          <title>Contact | 放射線像／Autoradiograph</title>
           <link rel="canonical" href="https://www.autoradiograph.org/contact" />
           <meta
             property="og:title"
-            content="Contact | 放射線像/Autoradiograph"
+            content="Contact | 放射線像／Autoradiograph"
           />
           <meta property="og:url" content="www.autoradiograph.org/contact" />
           <meta
             property="og:site_name"
-            content="Contact | 放射線像/Autoradiograph"
+            content="Contact | 放射線像／Autoradiograph"
           />
         </Helmet>
         <h2>Contact</h2>

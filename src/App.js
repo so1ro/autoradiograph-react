@@ -50,7 +50,7 @@ class App extends Component {
       <div className="App">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>放射線像/Autoradiograph</title>
+          <title>放射線像／Autoradiograph</title>
           <meta
             name="description"
             content="放射能を可視化するプロジェクト / Project of visualizing radiation"
@@ -64,14 +64,14 @@ class App extends Component {
             content="Masamichi Kagaya, Satoshi Mori, 加賀谷 雅道, 森 敏"
           />
           <link rel="canonical" href="https://www.autoradiograph.org" />
-          <meta property="og:title" content="放射線像/Autoradiograph" />
+          <meta property="og:title" content="放射線像／Autoradiograph" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
             content="放射能を可視化するプロジェクト/Visualize radiation"
           />
           <meta property="og:url" content="www.autoradiograph.org" />
-          <meta property="og:site_name" content="放射線像/Autoradiograph" />
+          <meta property="og:site_name" content="放射線像／Autoradiograph" />
           <meta
             property="og:image"
             content="https://www.autoradiograph.org/ogp.png"

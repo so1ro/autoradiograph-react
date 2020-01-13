@@ -7,19 +7,19 @@ const ShortMovie = () => {
     <section className="component">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Short Movie | 放射線像/Autoradiograph</title>
+        <title>Short Movie | 放射線像／Autoradiograph</title>
         <link
           rel="canonical"
           href="https://www.autoradiograph.org/shortmovie"
         />
         <meta
           property="og:title"
-          content="Short Movie | 放射線像/Autoradiograph"
+          content="Short Movie | 放射線像／Autoradiograph"
         />
         <meta property="og:url" content="www.autoradiograph.org/shortmovie" />
         <meta
           property="og:site_name"
-          content="Short Movie | 放射線像/Autoradiograph"
+          content="Short Movie | 放射線像／Autoradiograph"
         />
       </Helmet>
       <ul className="shortmovie-card">
