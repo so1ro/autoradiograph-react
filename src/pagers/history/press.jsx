@@ -1,7 +1,6 @@
 import React, { Component } from "react";
+import PictureGrid from "../../components/pictureGrid";
 import { getPressList } from "./data/press";
-import { Picture } from "react-responsive-picture";
-import { getJpClass } from "../../components/common/getJpClass.js";
 import { getActive } from "../../components/common/getActiveClass";
 
 class Press extends Component {
@@ -12,19 +11,9 @@ class Press extends Component {
     const { lang, tabSelect } = this.props;
 
     return (
-      <ul className={"press" + getActive(tabSelect, "press")}>
-        {pressList.map(press => (
-          <li key={press._id}>
-            <div>
-              <Picture src={press.imgUrl} alt={press.title} />
-              <span className={"caption" + getJpClass(lang)}>
-                {press.title[lang]}{" "}
-                <span className="date">( {press.date} )</span>
-              </span>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className={"press" + getActive(tabSelect, "press")}>
+        <PictureGrid lang={lang} items={pressList} />
+      </div>
     );
   }
 }
