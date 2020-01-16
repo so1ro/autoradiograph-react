@@ -50,10 +50,10 @@ class App extends Component {
       <div className="App">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>放射線像／Autoradiograph</title>
+          <title>放射線像／Autoradiograph｜公式サイト／Official website</title>
           <meta
             name="description"
-            content="放射能を可視化するプロジェクト / Project of visualizing radiation"
+            content="放射能を可視化するプロジェクト／Project of visualizing radiation"
           />
           <meta
             name="keywords"
@@ -68,7 +68,7 @@ class App extends Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="放射能を可視化するプロジェクト/Visualize radiation"
+            content="放射能を可視化するプロジェクト／Project of visualizing radiation"
           />
           <meta property="og:url" content="www.autoradiograph.org" />
           <meta property="og:site_name" content="放射線像／Autoradiograph" />
