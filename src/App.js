@@ -53,11 +53,11 @@ class App extends Component {
           <title>放射線像／Autoradiograph｜公式サイト／Official website</title>
           <meta
             name="description"
-            content="放射能を可視化するプロジェクト／Project of visualizing radiation"
+            content="放射能を可視化するプロジェクト／Project of visualizing radiation since 2011"
           />
           <meta
             name="keywords"
-            content="Autoradiograph, 放射線像, Radiation, 放射能, Visualize, 可視化"
+            content="Autoradiograph, 放射線像, Radiation, 放射能, Visualize, 可視化, Fukushima, Chernobyl, 福島, チェルノブイリ Masamichi Kagaya, Satoshi Mori, 加賀谷 雅道, 森 敏"
           />
           <meta
             name="author"
