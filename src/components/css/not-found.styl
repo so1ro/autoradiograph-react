@@ -1,0 +1,31 @@
+@import '../../asset/css/*'
+
+.wrap
+    margin-bottom rfs(80px)
+    margin-top rfs(80px)
+    text-align center
+
+    .avatar
+        border-radius rfs(80px)
+        display inline-block
+        height rfs(100px)
+        width rfs(100px)
+
+    .avatar.kagaya
+        background url('../../pagers/top/imgs/kagaya@2x.png')
+        background-size cover
+
+    @media (--tablet: )
+        .avatar
+            height rfs(120px)
+            width rfs(120px)
+
+    @media (--sp3: )
+        .avatar
+            border-radius rfs(160px)
+            height 92px
+            width 92px
+
+    a
+        color activeColor
+        text-decoration none
