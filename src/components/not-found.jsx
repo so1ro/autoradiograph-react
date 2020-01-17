@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "./css/not-found.styl";
 
@@ -27,12 +28,12 @@ const NotFound = () => {
         <br />
         申し訳ありません。お探しのページは見当たりませんでした。
         <br />
-        <a href="../">こちら</a>からトップページへ移動してください。
+        <NavLink to="/">こちら</NavLink>からトップページへ移動してください。
         <br />
         <br />
         Sorry, the page you tried to go doesn't exist.
         <br />
-        Please go back to the top page from <a href="../">here</a>.
+        Please go back to the top page from <NavLink to="/">here</NavLink>.
       </div>
     </section>
   );
