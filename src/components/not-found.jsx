@@ -22,7 +22,7 @@ const NotFound = () => {
         />
       </Helmet>
       <h1>Not Found</h1>
-      <p className="wrap">
+      <div className="wrap">
         <figure className="avatar kagaya"></figure>
         <br />
         申し訳ありません。お探しのページは見当たりませんでした。
@@ -33,7 +33,7 @@ const NotFound = () => {
         Sorry, the page you tried to go doesn't exist.
         <br />
         Please go back to the top page from <a href="../">here</a>.
-      </p>
+      </div>
     </section>
   );
 };
