@@ -15,6 +15,13 @@
         background url('../../pagers/top/imgs/kagaya@2x.png')
         background-size cover
 
+    br.sp
+        display none
+
+    p.en
+        font-size 1.3rem
+        line-height 1.6
+
     @media (--tablet: )
         .avatar
             height rfs(120px)
@@ -25,6 +32,10 @@
             border-radius rfs(160px)
             height 92px
             width 92px
+
+    @media (--sp: )
+        br.sp
+            display inline-block
 
     a
         color activeColor

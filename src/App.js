@@ -111,7 +111,12 @@ class App extends Component {
               path="/contact"
               component={props => <Contact lang={this.state.lang} {...props} />}
             />
-            <Route path="/not-found" component={NotFound} />
+            <Route
+              path="/not-found"
+              component={props => (
+                <NotFound lang={this.state.lang} {...props} />
+              )}
+            />
             <Route
               path="/"
               exact
