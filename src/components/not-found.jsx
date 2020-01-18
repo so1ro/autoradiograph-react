@@ -5,7 +5,7 @@ import "./css/not-found.styl";
 
 const NotFound = ({ lang }) => {
   return (
-    <section className="history component">
+    <section className="notfound component">
       <Helmet>
         <meta charSet="utf-8" />
         <title>
