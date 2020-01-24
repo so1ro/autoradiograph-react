@@ -84,7 +84,7 @@ export const exhibitionList = [
     filed: { en: "Mar. 2017", jp: "2017 / 3" },
     content: {
       en: "England ／ FORMAT Photography Festival",
-      jp: "England ／ FORMAT Photography Festival"
+      jp: "イングランド ／ FORMAT Photography Festival"
     }
   },
   {
